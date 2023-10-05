@@ -1,0 +1,55 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+   
+
+    /* 1rem = 10px */
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: v.$fuente__principal;
+    font-size: 1.6rem;
+    height: 100%;
+    background-color: v.$fondo; 
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+
+
+h1{
+    font-size: 3.6rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2.5rem;
+}
+h1, h2, h3 {
+    margin: 0 0 2rem  0 ;
+}
+
+.btn-google{
+    margin-top: 2rem;
+    border: solid 1px v.$gris;
+}
+
+
+ 

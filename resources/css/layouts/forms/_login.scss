@@ -1,0 +1,12 @@
+@import "resources/css/base/_variables.scss";
+@import "resources/css/base/_mixins.scss";
+
+.dropdown-menu{
+    width: 40rem;
+    border-radius: 1rem;
+    p{
+        font-size: 1.6rem;
+        font-weight: $bold;
+        margin-bottom: 1rem;
+    }
+}

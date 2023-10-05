@@ -1,0 +1,35 @@
+
+@import "resources/css/base/_variables.scss";
+@import "resources/css/base/_mixins.scss";
+
+.logo {
+    
+    a{
+        color: $negro;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+    img{
+        width: 5rem;
+    }
+    
+    span {
+        color: $gris;
+    }
+}
+
+.header{
+    background-color: $blanco;
+    
+}
+
+.navegacion a{
+    color: $gris;
+}
+
+.btn-outline-success{
+    font-size: 1.6rem;
+    color: $primario;
+    border: 1px solid $primario;
+}
