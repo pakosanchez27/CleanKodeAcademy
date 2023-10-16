@@ -11,61 +11,70 @@
 </head>
 
 <body>
-    <div class="container-fluid header">
-        <div class="row d-flex p-3 align-items-md-center  justify-content-between">
-            <div class="col-7 logo">
+    <header class="container-fluid header px-5">
+        <div class="row d-flex p-3 align-items-md-center justify-content-between w-100 ">
+            <div class="col-3 logo ">
                 <a href="/">
                     <img src="{{ asset('img/Logo.png') }}" alt="Logo">
                     <p>CleanKode <span>Academy</span></p>
                 </a>
             </div>
-            <div class="col-5 navegacion">
+            <div class="col-9 navegacion  ">
                 <div class="row d-flex align-items-center">
-                    <div class="col d-flex gap-3">
+                    <div class="col-5 d-flex gap-3 justify-content-end  ">
                         <a href="#">Cursos</a>
                         <a href="#">planes</a>
                     </div>
-                    <div class="col d-flex align-items-center gap-3 align-content-center ">
+                    <div class="col-7 d-flex align-items-center gap-5 justify-content-end ">
 
                         <div class="dropdown">
                             <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false"
                                 data-bs-auto-close="outside">
                                 Iniciar Sesión
                             </a>
+                            <form class="dropdown-menu p-4 ">
+                                <fieldset>
+                                    <legend>Iniciar Sesión</legend>
+                                    <div class="mb-3 email">
+                                        <label for="email" class="form-label email">E-mail</label>
+                                        <input type="text" class="form-control form-control-lg " id="email"
+                                            placeholder="Ingresa tu E-mail" name="email">
+                                    </div> 
+                                    <div class="mb-3 pass">
+                                        <label for="password" class="form-label pass">Contraseña</label>
+                                        <input type="password" class="form-control form-control-lg " id="password"
+                                            placeholder="Ingresa tu Contraseña" name="password">
+                                    </div>
+                                    <div class="mb-3">
 
-                            <form class="dropdown-menu p-4">
-                                <p>Inicia Sesion</p>
+                                        <a class="recuperar">¿Olvidate tu contraseña?</a>
+
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block">Entrar</button>
+                                </fieldset>
                                 <hr>
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput"
-                                        placeholder="name@example.com">
-                                    <label for="floatingInput">Email</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="password" class="form-control" id="floatingPassword"
-                                        placeholder="Password">
-                                    <label for="floatingPassword">Password</label>
-                                </div>
-                                <div class="form-floating ">
-                                    <button type="submit" class="btn btn-success ">Iniciar Sesión</button>
-                                </div>
-                                <a href="#">¿Olvidate tu contraseña?</a>
-                                <hr>    
-                                <p>O Iniciar Sesión con:</p>
                                 <a href="#"
-                                    class="btn btn-google d-flex justify-content-center gap-3 align-items-center ">
+                                    class="btn-google d-flex justify-content-center gap-3 align-items-center ">
                                     <img src="{{ 'img/google.png' }}" alt="icono de google" width="25px">
-                                    <span>Iniciar Sesión con Google</span>
+                                    Iniciar Sesión con Google
                                 </a>
                             </form>
+
+
+
+
                         </div>
 
-                        <a href="#" class="btn btn-outline-success ">Registrarse</a>
+                        <a href="{{ route('register') }}" class="btn btn-success btn-lg "> <span>Registrarse</span> </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
+
+    <main>
+        @yield('contenido');
+    </main>
 
     @vite('resources/js/app.js')
 </body>

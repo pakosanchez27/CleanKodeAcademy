@@ -1,0 +1,15 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.btn{
+    font-weight: v.$bold;
+    background-color: v.$primario;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+ 
+}
+
+.btn-block{
+    width: 100%;
+}
