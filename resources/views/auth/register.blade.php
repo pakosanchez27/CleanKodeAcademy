@@ -105,7 +105,7 @@
                     </div>
                     <div class="mt-5 botones-register">
                         <input type="submit" class="btn btn-success btn-lg btn-block" value="Registrate">
-                        <a href="#" class="btn-google d-flex justify-content-center gap-3 align-items-center ">
+                        <a href="{{route('google.auth')}}" class="btn-google d-flex justify-content-center gap-3 align-items-center ">
                             <img src="{{ 'img/google.png' }}" alt="icono de google" width="25px">
                             <span>Registrate con Google</span>
                         </a>

@@ -3,6 +3,8 @@
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\GoogleAuthController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,6 @@ Route::get('/register', [RegisterController::class, 'index'])->name('register');
 
 
 Route::get('/', [LoginController::class, 'index'])->name('login');
+
+Route::get('/auth/google', [GoogleAuthController::class, 'redirectToGoogle'])->name('google.auth');
+Route::get('/auth/google/callback', [GoogleAuthController::class, 'handleGoogleCallback']);
