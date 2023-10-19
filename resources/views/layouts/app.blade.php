@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="{{ asset('img/Logo.png') }}" type="image/x-icon">
     <title>CleanKode Academy | @yield('Titulo')</title>
-    @vite('resources/css/app.scss')
+        @vite('resources/css/app.scss')
 </head>
 
 <body>
