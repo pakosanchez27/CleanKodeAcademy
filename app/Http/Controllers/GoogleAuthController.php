@@ -18,27 +18,27 @@ class GoogleAuthController extends Controller
         $this->client->setAccessType('offline');
         $this->client->setPrompt('select_account consent');
         $this->client->addScope(Drive::DRIVE);
+        
     }
 
     public function index()
     {
-        // Lógica para trabajar con Google Drive aquí
+        // Logic to work with Google Drive here
         return view('google.index');
     }
-
+    
     public function redirectToGoogle()
     {
         $authUrl = $this->client->createAuthUrl();
         return Redirect::to($authUrl);
     }
-
     public function handleGoogleCallback(Request $request)
     {
         $code = $request->get('code');
         $token = $this->client->fetchAccessTokenWithAuthCode($code);
-
-        // Ahora puedes guardar $token y usarlo para interactuar con Google Drive
-        // $token contiene el token de acceso y de actualización
-        // Asegúrate de almacenar el token de manera segura, ya que será necesario para futuras interacciones con la API de Google Drive.
+    
+        // Now you can save $token and use it to interact with Google Drive
+        // $token contains the access and refresh tokens
+        // Make sure to store the token securely, as it will be needed for future interactions with the Google Drive API.
     }
 }
