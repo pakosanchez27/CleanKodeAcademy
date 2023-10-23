@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\controllerAuthGoogle;
-use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\controllerAuthGoogle;
 
 
 
@@ -24,13 +26,11 @@ Route::get('/', function () {
 
 // Authentication
 
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::get('/', [LoginController::class, 'index'])->name('login');
 
-Route::get('/login-google', [controllerAuthGoogle::class, 'index'])->name('login-google');
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/register', [RegisterController::class, 'store']);
 
-// Route::get('/google-callback', function () {
-//     $user = Socialite::driver('google')->user();
-//     dd($user);
-//     // $user->token
-// });
+
+Route::get('/login-google', [AuthController::class, 'redirectToProvider'])->name('login-google');
+Route::get('/google-callback', [AuthController::class, 'handleProviderCallback']);
