@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;     
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
@@ -40,5 +40,8 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password),
             'idRol' => 3,
         ]);
+        // Otra forma de autenticar 
+        auth()->attempt($request->only('email', 'password'));
+        return redirect()->route('posts.index');
     }
 }

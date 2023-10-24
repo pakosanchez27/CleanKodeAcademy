@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -27,10 +28,16 @@ Route::get('/', function () {
 // Authentication
 
 Route::get('/', [LoginController::class, 'index'])->name('login');
+Route::post('/', [LoginController::class, 'store']);
+
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
 
 
+
 Route::get('/login-google', [AuthController::class, 'redirectToProvider'])->name('login-google');
 Route::get('/google-callback', [AuthController::class, 'handleProviderCallback']);
+
+
+Route::get('/CleanKoders/dashboard', [PostController::class, 'index'])->name('posts.index');

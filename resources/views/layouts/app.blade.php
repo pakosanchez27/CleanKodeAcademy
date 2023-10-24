@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="{{ asset('img/Logo.png') }}" type="image/x-icon">
     <title>CleanKode Academy | @yield('Titulo')</title>
-        @vite('resources/css/app.scss')
+    @vite('resources/css/app.scss')
 </head>
 
 <body>
@@ -32,18 +32,25 @@
                                 data-bs-auto-close="outside">
                                 Iniciar Sesión
                             </a>
-                            <form class="dropdown-menu p-4 ">
+                            <form class="dropdown-menu p-4 " method="POST" action="{{ route('login') }}">
+                                @csrf
                                 <fieldset>
                                     <legend>Iniciar Sesión</legend>
                                     <div class="mb-3 email">
                                         <label for="email" class="form-label email">E-mail</label>
-                                        <input type="text" class="form-control form-control-lg " id="email"
+                                        <input type="text" class="form-control form-control-lg @error('email') border-danger  @enderror "" id="email"
                                             placeholder="Ingresa tu E-mail" name="email">
-                                    </div> 
+                                        @error('email')
+                                            <p class="fs-6  text-danger">{{ $message }}</p>
+                                        @enderror
+                                    </div>
                                     <div class="mb-3 pass">
                                         <label for="password" class="form-label pass">Contraseña</label>
-                                        <input type="password" class="form-control form-control-lg " id="password"
+                                        <input type="password" class="form-control form-control-lg @error('password') border-danger  @enderror " " id="password"
                                             placeholder="Ingresa tu Contraseña" name="password">
+                                            @error('email')
+                                            <p class="fs-6  text-danger">{{ $message }}</p>
+                                        @enderror
                                     </div>
                                     <div class="mb-3">
 
@@ -53,7 +60,7 @@
                                     <button type="submit" class="btn btn-success btn-block">Entrar</button>
                                 </fieldset>
                                 <hr>
-                                <a href="#"
+                                <a href="{{ route('login-google') }}"
                                     class="btn-google d-flex justify-content-center gap-3 align-items-center ">
                                     <img src="{{ 'img/google.png' }}" alt="icono de google" width="25px">
                                     Iniciar Sesión con Google
@@ -71,7 +78,7 @@
             </div>
         </div>
     </header>
-    
+
     <main>
         @yield('contenido');
     </main>
