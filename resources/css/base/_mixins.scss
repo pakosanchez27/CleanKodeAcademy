@@ -15,3 +15,8 @@
     @content;
   }
 }
+@mixin desktopfull {
+  @media (min-width: v.$desktop) {
+    @content;
+  }
+}

@@ -14,9 +14,9 @@
     <header class="container-fluid header px-5">
         <div class="row d-flex p-3 align-items-md-center justify-content-between w-100 ">
             <div class="col-3 logo ">
-                <a href="/">
-                    <img src="{{ asset('img/Logo.png') }}" alt="Logo">
-                    <p>CleanKode <span>Academy</span></p>
+                <a href="/" class="logo">
+                   <div>C</div>
+                    <p>Cleankode <span>Academy</span></p>
                 </a>
             </div>
             <div class="col-9 navegacion  ">
@@ -83,7 +83,7 @@
         @yield('contenido');
     </main>
 
-    @vite('resources/js/app.js')
+    @vite('resources/js/app.js');
 </body>
 
 </html>

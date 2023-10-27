@@ -56,3 +56,24 @@ p.text-danger {
     margin: 0 !important;
     padding: 0 !important;
 }
+
+.btn:hover {
+    cursor: pointer;
+    background-color: darken( v.$primario,  30%);
+}
+
+.logo{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-family: v.$fuente__logo;
+    font-weight: 600;
+    div{
+        color: v.$primario;
+        font-weight: v.$bold;
+        font-size: 3.5rem;
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -27,6 +27,7 @@ class AuthController extends Controller
             // auth()->login($existingUser);
 
             // Redirigir o realizar cualquier acción necesaria
+            auth()->login($existingUser);
             return redirect()->route('posts.index');
         }
 

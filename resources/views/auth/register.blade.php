@@ -17,8 +17,8 @@
             <div class="degradado"></div>
             <div class="register-contendio">
                 <div class=" logo register-logo d-flex justify-content-end  ">
-                    <a href="/" class="m-5">
-                        <img src="{{ asset('img/Logo.png') }}" alt="Logo">
+                    <a href="/" class="m-5 logo">
+                        <div >C</div>
                         <p>CleanKode <span>Academy</span></p>
                     </a>
                 </div>
@@ -134,7 +134,7 @@
                     @enderror
                     </div>
                     <div class="mt-5 botones-register">
-                        <input type="submit" class="btn btn-success btn-lg btn-block" value="Registrate">
+                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Registrate">
                         <a href="{{ route('login-google') }}"
                             class="btn-google d-flex justify-content-center gap-3 align-items-center ">
                             <img src="{{ 'img/google.png' }}" alt="icono de google" width="25px">

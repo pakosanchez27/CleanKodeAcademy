@@ -1,0 +1,64 @@
+@import "resources/css/base/_variables.scss";
+@import "resources/css/base/_mixins.scss";
+
+
+.bg-inicio{
+    height: 60rem;
+    background-color: $primario;
+    color: $blanco;
+    padding: 3rem ;
+    background-image: url('../../../public/img/bg-inicio-m.png');
+    h1{
+        font-size: 2.8rem;
+    }
+    p{
+        font-size: 1.6rem;
+    }
+    
+    
+    @include tablet{
+        background-image: url('../../../public/img/bg-inicio-t.png');
+        background-position: center center;
+        height: 40rem;
+        padding: 3rem 10rem ;
+      
+      
+    }
+    @include desktop{
+        background-image: url('../../../public/img/bg-inicio-d.png');
+        h1{
+            font-size: 4rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+    }
+    @include desktopfull{
+       height: 50rem;
+    }
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn-negro{
+    background-color: $negro;
+    color: $blanco;
+    width: 20rem;
+    
+}
+
+.texto-header{
+    width: 100%;
+@include tablet{
+    width: 50%;
+}
+@include desktop{
+    width: 50%;
+}
+}
+
+
+.beneficios{
+    background-color: $blanco;
+    padding: 10rem 5rem;
+}
