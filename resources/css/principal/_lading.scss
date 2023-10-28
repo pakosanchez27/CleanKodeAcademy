@@ -60,5 +60,29 @@
 
 .beneficios{
     background-color: $blanco;
-    padding: 10rem 5rem;
+    padding: 5rem 3rem;
+    @include desktop{
+        padding: 5rem 10rem;
+    }
+    h2{
+        font-size: 2rem;
+        color: $primario;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.6rem;
+    }
+}
+
+.cursos-populares{
+    padding: 5rem 3rem;
+    @include desktop{
+        padding: 5rem 10rem;
+    }
+}
+.card{
+    width: 30rem !important;
+    padding: 0;
 }
