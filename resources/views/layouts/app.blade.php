@@ -15,7 +15,7 @@
         <div class="row d-flex p-3 align-items-md-center justify-content-between w-100 ">
             <div class="col-3 logo ">
                 <a href="/" class="logo">
-                   <div>C</div>
+                    <div>C</div>
                     <p>Cleankode <span>Academy</span></p>
                 </a>
             </div>
@@ -38,17 +38,19 @@
                                     <legend>Iniciar Sesión</legend>
                                     <div class="mb-3 email">
                                         <label for="email" class="form-label email">E-mail</label>
-                                        <input type="text" class="form-control form-control-lg @error('email') border-danger  @enderror "" id="email"
-                                            placeholder="Ingresa tu E-mail" name="email">
+                                        <input type="text"
+                                            class="form-control form-control-lg @error('email') border-danger  @enderror "
+                                            id="email" placeholder="Ingresa tu E-mail" name="email">
                                         @error('email')
                                             <p class="fs-6  text-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                     <div class="mb-3 pass">
                                         <label for="password" class="form-label pass">Contraseña</label>
-                                        <input type="password" class="form-control form-control-lg @error('password') border-danger  @enderror " " id="password"
-                                            placeholder="Ingresa tu Contraseña" name="password">
-                                            @error('email')
+                                        <input type="password"
+                                            class="form-control form-control-lg @error('password') border-danger  @enderror "
+                                            id="password" placeholder="Ingresa tu Contraseña" name="password">
+                                        @error('email')
                                             <p class="fs-6  text-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
@@ -80,10 +82,78 @@
     </header>
 
     <main>
-        @yield('contenido');
+        @yield('contenido')
     </main>
 
-    @vite('resources/js/app.js');
+    <footer class="container-fluid bg-light mt-5 footer">
+
+        <div class="container row p-5 d-flex justify-content-center align-items-center gap-5">
+            <div class="col-10 ">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-3 logo d-flex flex-column ">
+                        <a href="/" class="logo">
+                            <div>C</div>
+                            <p>Cleankode <span>Academy</span></p>
+                        </a>
+                        <ul class="d-flex list-unstyled  gap-2 ">
+                            <li><img src="{{ asset('img/facebook.png') }}" alt="Logo de Facebook"></li>
+                            <li><img src="{{ asset('img/instagram.png') }}" alt="Logo de Instagram"></li>
+                            <li><img src="{{ asset('img/gorjeo.png') }}" alt="Logo de Twitter"></li>
+                            <li><img src="{{ asset('img/youtube (1).png') }}" alt="Logo de Youtube"></li>
+                        </ul>
+                        <p>Estamos cambiando la forma en que el mundo aprende en linea. Nuestra plataforma te permite
+                            explorar, aprender y crecer a tu ritmo.</p>
+                    </div>
+                    <div class="col-3">
+                        <h3 class="fw-semibold">Categorías</h3>
+                        <nav class="d-flex flex-column ">
+                            <a href="#">Desarrollo web</a>
+                            <a href="#">Desarrollo mobil</a>
+                            <a href="#">Base de datos</a>
+                            <a href="#">Fundamentos</a>
+                            <a href="#">DevOps</a>
+                            <a href="#">Ciencias de datos</a>
+                            <a href="#">Inteligencia Artificial</a>
+                            <a href="#">Diseño</a>
+                            <a href="#">Testing</a>
+                        </nav>
+                    </div>
+                    <div class="col-3">
+                        <h3 class="fw-semibold">CleanKode Acadamy</h3>
+                        <nav class="d-flex flex-column ">
+                            <a href="#">Nosotro</a>
+                            <a href="#">Cursos</a>
+                            <a href="#">Planes</a>
+                            <a href="#">Terminos y Condiciones</a>
+                            <a href="#">Politicas de Privacidad</a>
+                            <a href="#">Contacto</a>
+                        </nav>
+                    </div>
+                    <div class="col-3">
+                        <h3 class="fw-semibold">Descarga la App.</h3>
+                        <p>Descarga la App y vive una mejor experiencia de aprendizaje.</p>
+                        <a href="btnGoogle bg-black">
+                            <img src="" alt="">
+                            <div class="text-ligth   ">
+                                <span class="fw-light">Descarga en </span>
+                                <p class="fw-semibold">Google play</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" container-fluid row py-5 text-center fw-semibold">
+            <div class="col-12 copy">
+                <p>
+                    <hr>
+                    © {{ date('Y') }} CleanKode Academy. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+
+    </footer>
+    @vite('resources/js/app.js')
 </body>
 
 </html>

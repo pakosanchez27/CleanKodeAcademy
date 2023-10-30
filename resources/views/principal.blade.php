@@ -10,7 +10,8 @@
             <div class="row d-flex flex-column mt-md-5 texto-header">
                 <div class="col-12 col-md-9 col-lg-8 mt-lg-5  ">
                     <h1 class=" text-uppercase fw-bold ">Tu futuro profecional esta a unos cuantos clicks</h1>
-                    <p class="mb-5">Contamos con curso que te ayudara a alcanzar tu objetivo profesional en la industria de la
+                    <p class="mb-5">Contamos con curso que te ayudara a alcanzar tu objetivo profesional en la industria de
+                        la
                         TI.</p>
                     <a href="#" class=" btn btn-negro">Comienza ahora</a>
                 </div>
@@ -44,10 +45,10 @@
 
     </section>
 
-    <section class="container cursos-populares text-center p-5 mt-5 ">
+    <section class="container cursos-populares text-center p-5 mt-5 mb-5 ">
         <h2 class=" m-0  ">Cursos Populares</h2>
         <p class="mb-5">Elije entre la variedad de cursos sobre el mundo de la tecnologia y más...</p>
-        <nav class="container d-flex justify-content-center p-4 w-100 flex-wrap  populares-banner align-items-center  ">
+        <nav class="container d-flex justify-content-center p-4 w-100 flex-wrap  populares-banner align-items-center mb-5   ">
             <a href="#" id="web" class="active">Desarrollo Web</a>
             <a href="#" id="movil">Desarrollo Movil</a>
             <a href="#" id="base">Base de Datos</a>
@@ -540,15 +541,70 @@
                     <a href="#" class="btn bg-primario text-light d-block w-100 ">Ver detalle</a>
                 </div>
             </div> <!-- fin card -->
-
-
-
-
-
         </div>
     </section>
 
-    <section>
+    <section class="container-fluid ">
+        <div class=" container  banner-classFree p-5 text-light d-flex flex-column gap-4 justify-content-center align-items-center  h-auto text-center">
+            <h2 class="fw-bold m-0">Las primeras clases de cada curso son total mente Gratis.</h2>
+            <p class="text-center">¿Por qué esperar? ¡Inscríbete ahora y aprovecha esta increíble oportunidad de
+                aprendizaje con clases gratuitas! Descubre lo que podemos ofrecerte en estas lecciones sin costo y da el
+                primer paso hacia un futuro lleno de conocimiento y éxito.
+            </p>
+            <a href="{{ route('register') }}" class=" btn btn-negro">Registraté</a>
+            
+        </div>
+    </section>
 
+    <section class="container-fluid">
+        <div class=" container text-center mt-5 w-75">
+            <h2 class=" m-0 fw-semibold">Precios</h2>
+            <p class="mb-5">¿Listo para llevar tu aprendizaje al siguiente nivel? Ofrecemos tres emocionantes opciones de
+                suscripción, cada una diseñada para satisfacer tus necesidades educativas de manera única</p>
+
+            <div class="contenedor-paqutes d-flex flex-column flex-md-row flex-md-wrap ">
+                <div class="card-paquete basico d-flex flex-column gap-3 justify-content-between shadow  order-2 order-lg-0">
+                    <h3>Mensual</h3>
+                    <p class="precio fw-semibold">$200 MXN <span class="fw-light ">Mensual</span></p>
+
+                    <ul class="mb-auto  ">
+                        <li>Acceso a todas los cursos</li>
+                        <li>Acceso a los recursos de los cursos</li>
+                        <li>Seccion de comentarios y preguntas de la clase</li>
+                        <li>Certificado digital al finalizar el curso</li>
+                    </ul>
+
+                    <a href="#" class="btn bg-primario">Comprar</a>
+                </div>
+
+                <div class="card-paquete completo d-flex flex-column gap-3 justify-content-between shadow order-1">
+                    <h3>Anual <span class="badge text-bg-info text-light ">Recomendado</span></h3>
+                    <p class="precio fw-semibold">$1000 MXN <span class="fw-light ">Anual</span></p>
+
+                    <ul class="mb-auto  ">
+                        <li>Acceso a todas las calses del curso</li>
+                        <li>Acceso a los recursos de la clase</li>
+                        <li>Seccion de comentarios y preguntas de la clase</li>
+                        <li>Certificado digital al finalizar el curso</li>
+                        <li>Acceso a foros y conferencias</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-negro">Comprar</a>
+                </div>
+                <div class="card-paquete basico d-flex flex-column gap-3 justify-content-between shadow order-3">
+                    <h3>Por curso</h3>
+                    <p class="precio fw-semibold">$600 MXN <span class="fw-light ">Mensual</span></p>
+
+                    <ul class="mb-auto  ">
+                        <li>Acceso a todas los cursos</li>
+                        <li>Acceso a los recursos de los cursos</li>
+                        <li>Seccion de comentarios y preguntas de la clase</li>
+                        <li>Certificado digital al finalizar el curso</li>
+                    </ul>
+
+                    <a href="#" class="btn bg-primario">Comprar</a>
+                </div>
+            </div>
+        </div>
     </section>
 @endsection
