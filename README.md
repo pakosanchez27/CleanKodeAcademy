@@ -1,5 +1,6 @@
-![Alt text](image.png)
+![Group 117](https://github.com/pakosanchez27/CleanKodeAcademy/assets/81460472/21b5a884-4f1c-4cb3-8cd6-ace5654acaf1)
 # CleanKode Academy
+
 
 >####Platform for online courses on technology.
 ****
