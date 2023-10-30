@@ -49,16 +49,94 @@
 
 .texto-header{
     width: 100%;
+    margin: 0;
 @include tablet{
-    width: 50%;
+    width: 75%;
 }
 @include desktop{
-    width: 50%;
+    width: 80%;
+    
 }
 }
 
 
 .beneficios{
-    background-color: $blanco;
-    padding: 10rem 5rem;
+ 
+    h2{
+        font-size: 2.5rem;
+        color: $primario;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.6rem;
+    }
+}
+
+.cursos-populares{
+    h2{
+        font-size: 4rem;
+        font-weight: $semiBold;
+    }
+    p{
+        font-size: 2rem;
+    }
+}
+.card{
+    width: 30rem !important;
+    height: 45rem;
+    padding: 0;
+    text-align: left;
+    border:none;
+    h3{
+        font-weight: $bold;
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.6rem;
+    }
+
+}
+.cardsCursos{
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    @include tablet{
+        grid-template-columns:repeat(2,1fr);
+       
+    }
+    @include desktop{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+.populares-banner {
+    background-color: rgba($primario, 0.3); // Agrega opacidad al color de fondo
+    border-radius: 1rem;
+    margin: 3rem 0;
+    gap: 3rem;
+ 
+    @include tablet{
+        gap: 3rem;
+    }
+    @include desktop{
+        gap: 6rem;
+    }
+   
+
+    
+    a {
+      
+        font-size: 1.8rem;
+        font-weight: $semiBold;
+    }
+
+  }
+
+  .active{
+    background-color: $primario;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    color: $blanco;
 }

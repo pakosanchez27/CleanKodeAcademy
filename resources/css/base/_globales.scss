@@ -30,6 +30,7 @@ a{
 }
 p{
     margin: 0;
+    font-size: 16px;
 }
 
 
@@ -76,4 +77,16 @@ p.text-danger {
         margin: 0;
         padding: 0;
     }
+}
+
+.bg-primario{
+    background-color: v.$primario;
+}
+
+.d-none{
+    display: none;
+}
+
+.d-block{
+    display: block;
 }
