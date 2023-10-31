@@ -1,3 +1,71 @@
+
+@import "resources/css/base/_variables.scss";
+@import "resources/css/base/_mixins.scss";
+
 .footer{
-    
+
+    p{
+        font-size: 14px;
+        color: #000000;
+        margin: 0;
+        font-family: $fuente__principal;
+    }
+    li > img{
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+    }
+
+    h3{
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    a{
+        color: #828282
+
+    }
 }
+
+.boton-google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 5rem;
+    background-color: #000000; /* Color de fondo de Google */
+    color: #ffffff; /* Color del texto */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.boton-google:hover {
+    background-color: #357ABD; /* Cambiar el color de fondo al pasar el ratón */
+}
+
+.boton-google img {
+    width: 24px; /* Ancho de la imagen del logo de Google */
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.texto {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.descarga {
+    font-weight: 300; /* Estilo de fuente más ligero */
+}
+
+p.google-play {
+    font-weight: 600; /* Estilo de fuente más negrita */
+ color: $blanco;
+
+
+}
+

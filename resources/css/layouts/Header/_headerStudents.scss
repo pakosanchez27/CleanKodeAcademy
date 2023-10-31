@@ -3,42 +3,75 @@
 @import "resources/css/base/_mixins.scss";
 
 .logo {
-    
+
     a{
-        color: $negro;
+
         display: flex;
         align-items: center;
         font-weight: bold;
+        p{
+            color: $negro;
+            font-size: 1.8rem;
+            & > span{
+        color: $gris;
+        font-size: 1.8rem;
+    }
+        }
 
     }
     img{
-        width: 5rem;
+        width: 4rem;
     }
-    
-    span {
-        color: $gris;
-    }
+
+
+
 }
 
 .header{
     background-color: $blanco;
-    
+
 }
 
 .navegacion a{
     color: $gris;
-    
+    font-size: 1.6rem;
+
 
     span{
         color: $blanco;
         font-size: 1.6rem;
     }
-   
-   
+
+
 }
 
 .btn-outline-success{
     font-size: 1.6rem;
     color: $primario;
     border: 1px solid $primario;
+}
+
+.inputBuscar{
+    width: 33rem;
+    height: 4rem;
+}
+.btnBuscar{
+    height: 4rem;
+
+}
+
+
+
+
+.fotoPerfil{
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+
+}
+
+.menu-usuario{
+    border-radius: 1rem;
+    width: 30rem;
+
 }
