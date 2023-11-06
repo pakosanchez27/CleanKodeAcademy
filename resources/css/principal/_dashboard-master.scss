@@ -1,0 +1,173 @@
+@import "resources/css/base/_variables.scss";
+@import "resources/css/base/_mixins.scss";
+
+
+.portada-master{
+    border-radius: 1rem;
+    width: 100%;
+
+    h2{
+        font-size: 1.8rem;
+    }
+    p{
+        font-size: 1.6rem;
+    }
+}
+.texto-portada{
+    padding: 0rem 5rem;
+    
+}
+
+.fondoPortada{
+    background-color: $primario;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    
+}
+.fotoPerfilPortada{
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50rem;
+    margin-top: -6rem;
+    border: solid 2rem $blanco;
+    @include tablet{
+        width: 8rem;
+        height: 8rem;
+        margin-top: -8rem;
+    }
+    @include desktop{
+        width: 10rem;
+        height: 10rem;
+        margin-top: -4rem;
+    }
+}
+
+.btn-crear{
+    a{
+        font-size: 1.6rem;
+        font-weight: $normal;
+    }
+}
+.menu{
+    width: 95%;
+    h3{
+        font-size: 1.6rem;
+    }
+    span{
+        font-size: 1.2rem;
+        color: $negro;
+        letter-spacing: .2rem;
+    }
+    a{
+        font-size: 1.4rem;
+     
+        color: #64748b;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: .5rem 1rem;
+        gap: .5rem;
+
+
+        &:hover{
+            background-color:#BECDD8;
+            border-radius: .5rem;
+            
+           
+        }
+    }
+}
+
+.activeMenu{
+    background-color:#BECDD8;
+    border-radius: .5rem;
+}
+
+
+.contenido{
+    span{
+        font-size: 1.4rem;
+    }
+}
+
+.table{
+    margin-top: 3rem;
+    
+
+    & h3{
+        font-size: 1.8rem;
+        margin: 0;
+    }
+}
+
+table{
+    border-collapse: collapse;
+    border-radius: .5rem;
+    thead > tr > th{
+        background-color: $primario;
+        color: $blanco;
+        border: none;
+        text-align: start;
+        padding: .5rem 2rem ;
+
+        &:last-child{
+            width: 1rem;
+        }
+    }
+
+    tbody > tr > td{
+        border-bottom: solid .1rem lighten($gris, 40%);
+        padding: 1rem 2rem;
+        text-align: center;
+        &:last-child{
+            width: 1rem;
+        }
+    }
+
+    .valoracion{
+        color: $amarillo;
+       
+        span{
+            color: $negro;
+        }
+    }
+
+   
+}
+
+.config {
+    width: 20rem;
+    p{
+        font-size: 1.2rem;
+        color: lighten($gris, 30%);
+        font-weight: $delgada;
+        letter-spacing: .2rem;
+        padding: 1rem 1.5rem 0 1.5rem;
+    }
+    a{
+        font-size: 1.4rem;
+        color: lighten($gris, 10%);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: .5rem;
+        padding: .3rem 1.5rem;
+
+        &:hover{
+            background-color: lighten($gris, 40%);
+            color: $primario;
+        }
+    }
+}
+
+.nombre-time{
+
+    span{
+        font-size: 1rem;
+        color: $gris;
+        font-weight: $delgada;
+        letter-spacing: .2rem;
+    }
+}
