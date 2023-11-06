@@ -23,11 +23,11 @@
                 @endauth
 
                     <img src="{{ asset('img/logo.png') }}" alt="">
-                    <p>CleanKode <span>Academy</span></p>
+                    <p class="d-none d-lg-flex ">CleanKode <span>Academy</span></p>
                 </a>
             </div>
             @auth
-                <div class="W-100 buscar d-none d-md-flex  ">
+                <div class="W-100 buscar  d-none d-md-flex  ">
                     <form class="d-flex align-items-center " role="search">
                         <input class="form-control me-2 inputBuscar" type="search" placeholder="Search"
                             aria-label="Search">
@@ -35,10 +35,13 @@
                     </form>
                 </div>
             @endauth
-            <div class="d-flex align-items-center gap-5 d-none d-lg-flex ">
-                <a href="#">Planes</a>
-                <a href="#">Cursos</a>
-                @auth
+            <div class=" align-items-center gap-5 d-flex d-md-flex ">
+                <div class="d-none d-lg-flex gap-3">
+
+                    @auth
+
+                </div>
+
                     <div class="dropdown">
                         <button class="btn btn-primary position-relative px-3 py-2" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -49,9 +52,7 @@
                             </span>
                         </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                Notificaciones
                             </ul>
                     </div>
                     <div class="nav-usuario ">
@@ -60,8 +61,8 @@
                                 <img src="{{ asset('img/fotoPerfil.jpg') }}" alt="icono de usuario" width="30px"
                                 class="border fotoPerfil ">
                             </a>
-                            <div class="dropdown-menu p-3 menu-usuario ">
-                             <div class="perfil-menu d-flex gap-3  justify-content-center  ">
+                            <div class="dropdown-menu menu-usuario ">
+                             <div class="perfil-menu d-flex gap-3  justify-content-start p-3 ">
                                 <img src="{{ asset('img/fotoPerfil.jpg') }}" alt="icono de usuario" width="30px"
                                 class="border fotoPerfil ">
                                 <div class="perfil-name">
@@ -69,17 +70,26 @@
                                     <span>{{ auth()->user()->name }}  {{  auth()->user()->apellido }}</span>
                                 </div>
                              </div>
-                             <nav>
 
+                             <hr>
+                             <nav>
+                                <ul class="text-start list-unstyled  ">
+                                    <li><a class="dropdown-item" href="#">Planes</a></li>
+                                    <li><a class="dropdown-item" href="#">Curosos</a></li>
+                                    <li><a class="dropdown-item" href="#">Rutas de Aprendisaje</a></li>
+                                </ul>
                              </nav>
                              <hr>
                              <nav>
-                                <ul class="text-end list-unstyled  ">
-                                    <li><a class="dropdown-item" href="#">Planes</a></li>
-                                    <li><a class="dropdown-item" href="#">Curosos</a></li>
-                                    <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
-                                </ul>
+                                <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button class="btn bg-danger border-0 w-100 d-block text-light btn-cerrar mt-3 " type="submit">Cerrar Sesión</button>
+                                </form>
                              </nav>
+                             <hr>
+
                           </div>
                     </div>
                     <div class="dropdown border rounded border-black  p-3 d-none ">
@@ -137,7 +147,8 @@
                     <a href="{{ route('register') }}" class="btn btn-success btn-lg "> <span>Registrarse</span> </a>
 
                 </div>
-                <button class="btn btn-primary d-flex justify-content-center  align-items-center d-lg-none "
+
+                <button class="btn btn-primary d-none justify-content-center  align-items-center d-lg-none "
                     type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
                     aria-controls="offcanvasWithBothOptions">
                     <img src="{{ asset('img/menu.png') }}" alt="icono de menu" width="20px" class="m-0">
@@ -233,7 +244,7 @@
                 <div class="row   d-flex flex-lg-row flex-column align-items-center align-items-lg-start   ">
                     <div class="col-3   logo d-flex flex-column justify-content-start align-items-start">
                         <a href="/" class="logo">
-                            <div>C</div>
+                            <img src="{{ asset('img/logo.png') }}" alt="">
                             <p>Cleankode <span>Academy</span></p>
                         </a>
                         <ul class="d-flex list-unstyled  gap-2 ">

@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\logoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\controllerAuthGoogle;
 
@@ -33,6 +34,8 @@ Route::post('/', [LoginController::class, 'store']);
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
+
+Route::post('/logout', [logoutController::class, 'logout'])->name('logout');
 
 
 

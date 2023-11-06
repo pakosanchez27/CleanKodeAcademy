@@ -52,11 +52,23 @@
 }
 
 .inputBuscar{
-    width: 33rem;
+    width: 10rem;
     height: 4rem;
+    @include tablet{
+      width: 25rem;
+    height: 4rem;
+    }
 }
 .btnBuscar{
+    @include tablet{
+        width: 24rem;
+
+    }
+    width: 8rem !important;
     height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -72,6 +84,23 @@
 
 .menu-usuario{
     border-radius: 1rem;
-    width: 30rem;
+    width: 25rem !important;
+
+
+
+}
+.prefil-menu{
+    padding: 2rem 3rem;
+}
+.perfil-name{
+    p{
+        font-size: 1.8rem;
+        span{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.btn-cerrar{
 
 }
