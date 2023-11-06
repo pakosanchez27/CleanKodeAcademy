@@ -40,7 +40,7 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password),
             'idRol' => 3,
         ]);
-        // Otra forma de autenticar 
+        // Otra forma de autenticar
         auth()->attempt($request->only('email', 'password'));
         return redirect()->route('posts.index');
     }
