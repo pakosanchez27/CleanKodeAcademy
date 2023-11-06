@@ -546,7 +546,7 @@
 
     <section class="container-fluid ">
         <div class=" container  banner-classFree p-5 text-light d-flex flex-column gap-4 justify-content-center align-items-center  h-auto text-center">
-            <h2 class="fw-bold m-0">Las primeras clases de cada curso son total mente Gratis.</h2>
+            <h2 class="fw-bold m-0">Las primeras clases de cada curso son totalmente Gratis.</h2>
             <p class="text-center">¿Por qué esperar? ¡Inscríbete ahora y aprovecha esta increíble oportunidad de
                 aprendizaje con clases gratuitas! Descubre lo que podemos ofrecerte en estas lecciones sin costo y da el
                 primer paso hacia un futuro lleno de conocimiento y éxito.

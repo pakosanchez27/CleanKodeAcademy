@@ -4,6 +4,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    background-color: v.$fondo;
    
 
     /* 1rem = 10px */
@@ -89,4 +90,14 @@ p.text-danger {
 
 .d-block{
     display: block;
+}
+
+.sombra{
+  
+    border: solid .1rem lighten(v.$gris, 40%);
+    border-radius: 1rem;
+}
+
+.bg-blanco{
+    background-color: v.$blanco;
 }

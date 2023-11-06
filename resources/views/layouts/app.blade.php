@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="{{ asset('img/Logo.png') }}" type="image/x-icon">
     <title>CleanKode Academy | @yield('Titulo')</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css" rel="stylesheet">
+
     @vite('resources/css/app.scss')
 </head>
 
@@ -269,6 +271,7 @@
                             <a href="#">Terminos y Condiciones</a>
                             <a href="#">Politicas de Privacidad</a>
                             <a href="#">Contacto</a>
+                            <a href="{{route('login-codemaster')}}">CodeMasters</a>
                         </nav>
                     </div>
                     <div class="col-3 d-flex flex-column gap-3 ">
