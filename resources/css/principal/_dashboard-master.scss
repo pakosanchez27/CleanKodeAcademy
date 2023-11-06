@@ -15,14 +15,14 @@
 }
 .texto-portada{
     padding: 0rem 5rem;
-    
+
 }
 
 .fondoPortada{
     background-color: $primario;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    
+
 }
 .fotoPerfilPortada{
     width: 6rem;
@@ -62,7 +62,7 @@
     }
     a{
         font-size: 1.4rem;
-     
+
         color: #64748b;
         display: flex;
         justify-content: start;
@@ -74,8 +74,8 @@
         &:hover{
             background-color:#BECDD8;
             border-radius: .5rem;
-            
-           
+
+
         }
     }
 }
@@ -94,7 +94,7 @@
 
 .table{
     margin-top: 3rem;
-    
+
 
     & h3{
         font-size: 1.8rem;
@@ -128,13 +128,13 @@ table{
 
     .valoracion{
         color: $amarillo;
-       
+
         span{
             color: $negro;
         }
     }
 
-   
+
 }
 
 .config {
@@ -169,5 +169,23 @@ table{
         color: $gris;
         font-weight: $delgada;
         letter-spacing: .2rem;
+    }
+}
+
+.card-estudiantes{
+    img{
+        object-fit: cover;
+        object-position: center;
+
+    }
+}
+
+.nomina-buscador{
+    select{
+        height: 4rem;
+        font-size: 1.6rem;
+        option{
+            font-size: 1.6rem;
+        }
     }
 }

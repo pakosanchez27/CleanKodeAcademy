@@ -1,10 +1,11 @@
 import * as bootstrap from 'bootstrap';
-
+//importa otro archivo de js
+import './dashboard-codemaster';
 // Resto de tu código
 
 // Variables
 
-// Opcines categorias 
+// Opcines categorias
 const opcWeb = document.querySelector('#web');
 const opcMobile = document.querySelector('#movil');
 const opcBase = document.querySelector('#base');
@@ -31,7 +32,7 @@ function eventos() {
     opcFundamentos.addEventListener('click', mostrarFundamentos);
     opcIA.addEventListener('click', mostrarIA);
 
-  
+
 
 }
 
@@ -146,6 +147,6 @@ function mostrarIA(e) {
     vistaFundamentos.classList.add('d-none');
     vistaIA.classList.remove('d-none');
     vistaIA.classList.add('d-grid');
-    
+
 }
 
