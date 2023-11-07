@@ -197,7 +197,7 @@
                     </section>
                 </div>
 
-                <div class="card-estudiantes col-12 col-lg-9 h-25  d-none " id="vista-dashboard">
+                <div class="card-estudiantes col-12 col-lg-9 h-25   " id="vista-dashboard">
                     <section class="contenido ">
                         <div class="row ">
                             <div class="col-lg-4 col-md-12 col-12  ">
