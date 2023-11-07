@@ -5,7 +5,7 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     background-color: v.$fondo;
-   
+
 
     /* 1rem = 10px */
 
@@ -21,7 +21,7 @@ body {
     font-family: v.$fuente__principal;
     font-size: 1.6rem;
     height: 100%;
-    background-color: v.$fondo; 
+    background-color: v.$fondo;
 }
 
 a{
@@ -93,11 +93,16 @@ p.text-danger {
 }
 
 .sombra{
-  
+
     border: solid .1rem lighten(v.$gris, 40%);
     border-radius: 1rem;
 }
 
 .bg-blanco{
     background-color: v.$blanco;
+}
+
+.activo{
+    background-color: v.$primario;
+    color: v.$blanco;
 }

@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="{{ asset('img/Logo.png') }}" type="image/x-icon">
     <title>CleanKode Academy | @yield('Titulo')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
 
     @vite('resources/css/app.scss')
 </head>
@@ -308,7 +310,12 @@
         </div>
 
     </footer>
-  
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+        var quill = new Quill('#editor', {
+          theme: 'snow'
+        });
+      </script>
     @vite('resources/js/app.js')
 
 </body>

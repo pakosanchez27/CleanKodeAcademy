@@ -24,7 +24,7 @@
 
                 </div>
                 <div class="col-4 w-auto ">
-                    <a href="#" class="btn btn-primary mt-3 mt-md-0 btn-crear">Crear Curso</a>
+                    <a href="{{route('newCurso.index')}}" class="btn btn-primary mt-3 mt-md-0 btn-crear">Crear Curso</a>
                 </div>
             </div>
         </section>

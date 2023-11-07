@@ -8,8 +8,9 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\logoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\controllerAuthGoogle;
-use App\Http\Controllers\loginCodeMasterController;
+use App\Http\Controllers\NuevoCursoController;
 use App\Http\Controllers\PostMasterController;
+use App\Http\Controllers\loginCodeMasterController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -28,7 +29,7 @@ Route::get('/', function () {
 });
 
 // Authentication
-// Login y homepaCleanKoders 
+// Login y homepaCleanKoders
 
 Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::post('/', [LoginController::class, 'store']);
@@ -56,3 +57,7 @@ Route::get('/CleanKoders/dashboard', [PostController::class, 'index'])->name('po
 // Dashboard de CodeMaster
 
 Route::get('/CodeMaster/dashboard', [PostMasterController::class, 'index'])->name('Master.index');
+
+// Vista de nuevo curso
+
+Route::get('/CodeMaster/newCurso', [NuevoCursoController::class, 'index'])->name('newCurso.index');
