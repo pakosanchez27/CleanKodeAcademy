@@ -189,3 +189,33 @@ table{
         }
     }
 }
+
+.tabla-nomina{
+    table > tr > td{
+        padding: 1rem;
+    }
+}
+
+.formulario-perfil{
+
+    input, select, textarea{
+        padding: 1rem;
+        font-size: 1.6rem;
+        border-radius: .5rem;
+        border: solid .1rem lighten($gris, 40%);
+
+        &::placeholder{
+           
+            font-size: 1.6rem;
+        }
+
+    }
+    label{
+        font-size: 1.6rem;
+        color: $negro;
+        font-weight: $semiBold;
+        
+
+    }
+   
+}

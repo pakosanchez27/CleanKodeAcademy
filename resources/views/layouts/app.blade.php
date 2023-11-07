@@ -13,8 +13,6 @@
 </head>
 
 <body>
-
-
     <header class="container-fluid  py-3 px-5 header">
         <nav class="container d-flex justify-content-between align-items-center  navegacion">
             <div class="logo">
@@ -310,6 +308,7 @@
         </div>
 
     </footer>
+  
     @vite('resources/js/app.js')
 
 </body>
