@@ -130,7 +130,7 @@
             <div class="w-100 mb-4 rounded ">
                 <!-- Card Header -->
                 <div class="card-header p-2 ">
-                    <h3 class="mb-0 fw-semibold ">Informacion por Clase</h4>
+                    <h3 class="mb-0 fw-semibold ">Agrega Clases.</h4>
                 </div>
                 <hr>
                 <!-- Card Body -->

@@ -28,6 +28,8 @@ a{
     text-decoration: none;
     font-size: 1.6rem;
     margin: 0;
+
+
 }
 p{
     margin: 0;
@@ -105,4 +107,9 @@ p.text-danger {
 .activo{
     background-color: v.$primario;
     color: v.$blanco;
+
+    a{
+        color: v.$blanco !important;
+    }
 }
+
