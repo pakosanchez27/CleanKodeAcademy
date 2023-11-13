@@ -52,9 +52,8 @@ CREATE TABLE Curso (
     idCurso INT PRIMARY KEY,
     nombreCurso VARCHAR(255),
     descripcionCurso TEXT,
-    cortaDescripCurso VARCHAR(255),
     FotoCurso VARCHAR(255),
-    FotoPorCurso VARCHAR(255),
+    videoIntro VARCHAR(255),
     idCategoria INT,
     FOREIGN KEY (idCategoria) REFERENCES Categoria(idCategoria)
  

@@ -60,7 +60,7 @@
                     <div class="nav-usuario ">
                         <div class="dropdown ">
                             <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="{{ asset('img/fotoPerfil.jpg') }}" alt="icono de usuario" width="30px"
+                                <img src="{{ asset('img/fotoPerfil.jpg') }}" alt="icono de usuario" 
                                 class="border fotoPerfil ">
                             </a>
                             <div class="dropdown-menu menu-usuario ">

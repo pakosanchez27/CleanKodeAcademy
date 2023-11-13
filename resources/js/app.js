@@ -1,16 +1,20 @@
 import * as bootstrap from 'bootstrap';
 //importa otro archivo de js
 import './dashboard-codemaster';
+import './dashboard-cleankoders';
+import './agregarClase';
+// Resto de tu códigoz
 // Resto de tu código
 
 // Variables
 
 // Opcines categorias
-const opcWeb = document.querySelector('#web');
+const opcWeb = document.querySelector('#web') ?? null;
 const opcMobile = document.querySelector('#movil');
 const opcBase = document.querySelector('#base');
 const opcFundamentos = document.querySelector('#fundamentos');
 const opcIA = document.querySelector('#IA');
+
 
 // vistas categorias
 
@@ -26,7 +30,7 @@ const vistaIA = document.querySelector('#CursosIA');
 eventos();
 
 function eventos() {
-    opcWeb.addEventListener('click', mostrarWeb);
+    opcWeb.addEventListener('click', mostrarWeb) ;
     opcMobile.addEventListener('click', mostrarMobile);
     opcBase.addEventListener('click', mostrarBase);
     opcFundamentos.addEventListener('click', mostrarFundamentos);

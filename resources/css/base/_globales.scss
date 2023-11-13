@@ -104,12 +104,21 @@ p.text-danger {
     background-color: v.$blanco;
 }
 
-.activo{
+.active{
     background-color: v.$primario;
-    color: v.$blanco;
+    color: v.$blanco !important;
+    border-radius: .5rem;
 
     a{
         color: v.$blanco !important;
     }
+}
+
+.form-switch .form-check-input {
+    border-color: v.$gris;
+    height: 1.6em;
+    margin-right: 0.5rem;
+    width: 5rem;
+    background-color: v.$primario;
 }
 
