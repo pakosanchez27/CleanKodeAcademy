@@ -24,7 +24,7 @@
 
                 </div>
                 <div class="col-4 w-auto ">
-                    <a href="{{route('newCurso.index')}}" class="btn btn-primary mt-3 mt-md-0 btn-crear">Crear Curso</a>
+                    <a href="{{ route('newCurso.index') }}" class="btn btn-primary mt-3 mt-md-0 btn-crear">Crear Curso</a>
                 </div>
             </div>
         </section>
@@ -59,8 +59,8 @@
                                     <path
                                         d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
                                 </svg>Mis Cursos</a>
-                            <a href="#" id="mis-cleankoders"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-backpack" viewBox="0 0 16 16">
+                            <a href="#" id="mis-cleankoders"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-backpack" viewBox="0 0 16 16">
                                     <path
                                         d="M4.04 7.43a4 4 0 0 1 7.92 0 .5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14ZM4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-4Zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10H5Z" />
                                     <path
@@ -76,8 +76,8 @@
                                 </svg>
                                 </svg>
                                 </svg>Comentarios</a>
-                            <a href="#" id="ingresos"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                            <a href="#" id="ingresos"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
                                         d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z" />
                                     <path
@@ -93,30 +93,32 @@
                         <span>CONFIGURACION</span>
 
                         <nav class="d-flex flex-column gap-3">
-                            <a href="#" id="perfil"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <a href="#" id="perfil"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                                     <path
                                         d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
                                 </svg>Perfil</a>
 
-                            <a href="#" id="seguridad"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16">
+                            <a href="#" id="seguridad"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16">
                                     <path
                                         d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
                                     <path
                                         d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z" />
                                 </svg>Seguridad</a>
-                                <form action="{{route('logout')}}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="btn bg-danger text-light d-flex gap-3 justify-content-center align-items-center " ><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit"
+                                    class="btn bg-danger text-light d-flex gap-3 justify-content-center align-items-center "><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
                                             d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z" />
                                         <path fill-rule="evenodd"
                                             d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
                                     </svg>Cerrar Sesión</button>
-                                </form>
-                            
+                            </form>
+
                         </nav>
                     </div>
                 </div>
@@ -135,16 +137,17 @@
                                     <path
                                         d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
                                 </svg>Mis Cursos</a>
-                            <a href="#" id="mis-cleankoders"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-backpack" viewBox="0 0 16 16">
+                            <a href="#" id="mis-cleankoders"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-backpack"
+                                    viewBox="0 0 16 16">
                                     <path
                                         d="M4.04 7.43a4 4 0 0 1 7.92 0 .5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14ZM4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-4Zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10H5Z" />
                                     <path
                                         d="M6 2.341V2a2 2 0 1 1 4 0v.341c2.33.824 4 3.047 4 5.659v5.5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5V8a6.002 6.002 0 0 1 4-5.659ZM7 2v.083a6.04 6.04 0 0 1 2 0V2a1 1 0 0 0-2 0Zm1 1a5 5 0 0 0-5 5v5.5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5V8a5 5 0 0 0-5-5Z" />
                                 </svg>
                                 </svg>Mis Cleankoders</a>
-                            <a href="#" id="comentarios"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-card-text" viewBox="0 0 16 16">
+                            <a href="#" id="comentarios"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-card-text" viewBox="0 0 16 16">
                                     <path
                                         d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
                                     <path
@@ -152,8 +155,8 @@
                                 </svg>
                                 </svg>
                                 </svg>Comentarios</a>
-                            <a href="#" id="ingresos"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                            <a href="#" id="ingresos"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
                                         d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z" />
                                     <path
@@ -169,30 +172,32 @@
 
                         <span>CONFIGURACION</span>
                         <nav class="d-flex flex-column gap-3">
-                            <a href="#" id="perfil"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <a href="#" id="perfil"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                                     <path
                                         d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
                                 </svg>Perfil</a>
 
-                            <a href="#" id="seguridad"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16">
+                            <a href="#" id="seguridad"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16">
                                     <path
                                         d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
                                     <path
                                         d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z" />
                                 </svg>Seguridad</a>
-                                <form action="{{route('logout')}}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="btn bg-danger text-light d-flex gap-3 justify-content-center align-items-center " ><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit"
+                                    class="btn bg-danger text-light d-flex gap-3 justify-content-center align-items-center "><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
                                             d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z" />
                                         <path fill-rule="evenodd"
                                             d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
                                     </svg>Cerrar Sesión</button>
-                                </form>
-                            
+                            </form>
+
                         </nav>
                     </section>
                 </div>
@@ -261,10 +266,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($resultados as $resultado)
                                     <tr>
-                                        <td><img class="rounded" src="{{ asset('img/bg-java.png') }}"
-                                                alt="Imagen del curso" width="80px"></td>
-                                        <td class="fw-semibold text-start ">Curso de Java</td>
+                                        <td>
+                                            <img class="rounded" src="{{ asset('storage/images/' . $resultado->FotoCurso) }}" alt="Imagen del curso" width="80px">
+
+                                            </td>
+                                        <td class="fw-semibold text-start ">{{$resultado->nombreCurso}}</td>
                                         <td class="text-start ">12/12/2021</td>
                                         <td class="text-start">
                                             <span class="badge bg-success">Activo</span>
@@ -314,167 +322,8 @@
 
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td><img class="rounded" src="{{ asset('img/bg-php.png') }}"
-                                                alt="Imagen del curso" width="80px"></td>
-                                        <td class="fw-semibold text-start ">Curso de php</td>
-                                        <td class="text-start ">12/12/2021</td>
-                                        <td class="text-start">
-                                            <span class="badge bg-danger">Borrado</span>
-                                        </td>
-                                        <td>
-                                            <div class="btn-group dropstart">
-                                                <button type="button" class="border-0 bg-blanco"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        fill="currentColor" class="bi bi-three-dots-vertical"
-                                                        viewBox="0 0 16 16">
-                                                        <path
-                                                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                    </svg>
-                                                </button>
-                                                <ul class="dropdown-menu config">
-                                                    <!-- Dropdown menu links -->
-                                                    <div class="d-flex flex-column gap-2">
-                                                        <p class=" text-uppercase ">Configuracion</p>
-                                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                width="16" height="16" fill="currentColor"
-                                                                class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                                                <path fill-rule="evenodd"
-                                                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                                            </svg>Editar</a>
-                                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                width="16" height="16" fill="currentColor"
-                                                                class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-                                                                <path fill-rule="evenodd"
-                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
-                                                            </svg>Bajar</a>
-                                                    </div>
-                                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                                                            width="16" height="16" fill="currentColor"
-                                                            class="bi bi-trash" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
-                                                            <path
-                                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
-                                                        </svg>Eliminar</a>
-
-                                                </ul>
-                                            </div>
-
-
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img class="rounded" src="{{ asset('img/bg-react.png') }}"
-                                                alt="Imagen del curso" width="80px"></td>
-                                        <td class="fw-semibold text-start ">Curso de php</td>
-                                        <td class="text-start ">12/12/2021</td>
-                                        <td class="text-start ">
-                                            <span class="badge bg-warning">Pendiente</span>
-                                        </td>
-                                        <td>
-                                            <div class="btn-group dropstart">
-                                                <button type="button" class="border-0 bg-blanco"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        fill="currentColor" class="bi bi-three-dots-vertical"
-                                                        viewBox="0 0 16 16">
-                                                        <path
-                                                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                    </svg>
-                                                </button>
-                                                <ul class="dropdown-menu config">
-                                                    <!-- Dropdown menu links -->
-                                                    <div class="d-flex flex-column gap-2">
-                                                        <p class=" text-uppercase ">Configuracion</p>
-                                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                width="16" height="16" fill="currentColor"
-                                                                class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                                                <path fill-rule="evenodd"
-                                                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                                            </svg>Editar</a>
-                                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                width="16" height="16" fill="currentColor"
-                                                                class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-                                                                <path fill-rule="evenodd"
-                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
-                                                            </svg>Bajar</a>
-                                                    </div>
-                                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                                                            width="16" height="16" fill="currentColor"
-                                                            class="bi bi-trash" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
-                                                            <path
-                                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
-                                                        </svg>Eliminar</a>
-
-                                                </ul>
-                                            </div>
-
-
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img class="rounded" src="{{ asset('img/bg-react.png') }}"
-                                                alt="Imagen del curso" width="80px"></td>
-                                        <td class="fw-semibold text-start ">Curso de php</td>
-                                        <td class="text-start ">12/12/2021</td>
-                                        <td class="text-start ">
-                                            <span class="badge bg-warning">Pendiente</span>
-                                        </td>
-                                        <td>
-                                            <div class="btn-group dropstart">
-                                                <button type="button" class="border-0 bg-blanco"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        fill="currentColor" class="bi bi-three-dots-vertical"
-                                                        viewBox="0 0 16 16">
-                                                        <path
-                                                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                    </svg>
-                                                </button>
-                                                <ul class="dropdown-menu config">
-                                                    <!-- Dropdown menu links -->
-                                                    <div class="d-flex flex-column gap-2">
-                                                        <p class=" text-uppercase ">Configuracion</p>
-                                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                width="16" height="16" fill="currentColor"
-                                                                class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                                                <path fill-rule="evenodd"
-                                                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                                            </svg>Editar</a>
-                                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                width="16" height="16" fill="currentColor"
-                                                                class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-                                                                <path fill-rule="evenodd"
-                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
-                                                            </svg>Bajar</a>
-                                                    </div>
-                                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                                                            width="16" height="16" fill="currentColor"
-                                                            class="bi bi-trash" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
-                                                            <path
-                                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
-                                                        </svg>Eliminar</a>
-
-                                                </ul>
-                                            </div>
-
-
-                                        </td>
-                                    </tr>
-
-
+                                 
+                                    @endforeach
 
                                 </tbody>
                             </table>
@@ -983,7 +832,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-9 h-25 d-none "  id="vista-comentarios">
+                <div class="col-12 col-lg-9 h-25 d-none " id="vista-comentarios">
                     <div class=" mb-4">
                         <!-- Card header -->
                         <div class="card-header d-lg-flex align-items-center justify-content-between bg-blanco p-5">
@@ -1309,7 +1158,8 @@
                                     <td>
                                         <a href="#" class="descargar text-warning"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="25 " height="25 "
-                                                fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+                                                fill="currentColor" class="bi bi-arrow-down-square"
+                                                viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd"
                                                     d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
                                             </svg></a>
@@ -1327,7 +1177,8 @@
                                     <td>
                                         <a href="#" class="descargar text-warning"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="25 " height="25 "
-                                                fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+                                                fill="currentColor" class="bi bi-arrow-down-square"
+                                                viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd"
                                                     d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
                                             </svg></a>

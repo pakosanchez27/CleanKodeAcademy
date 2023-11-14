@@ -22,11 +22,11 @@
                     <a href="{{ route('posts.index') }}" class="logo">
                     @else
                         <a href="/" class="logo">
-                @endauth
+                        @endauth
 
-                    <img src="{{ asset('img/logo.png') }}" alt="">
-                    <p class="d-none d-lg-flex ">CleanKode <span>Academy</span></p>
-                </a>
+                        <img src="{{ asset('img/logo.png') }}" alt="">
+                        <p class="d-none d-lg-flex ">CleanKode <span>Academy</span></p>
+                    </a>
             </div>
             @auth
                 <div class="W-100 buscar  d-none d-md-flex  ">
@@ -42,7 +42,7 @@
 
                     @auth
 
-                </div>
+                    </div>
 
                     <div class="dropdown">
                         <button class="btn btn-primary position-relative px-3 py-2" type="button" data-bs-toggle="dropdown"
@@ -53,182 +53,185 @@
                                 <span class="visually-hidden">New alerts</span>
                             </span>
                         </button>
-                            <ul class="dropdown-menu">
-                                Notificaciones
-                            </ul>
+                        <ul class="dropdown-menu">
+                            Notificaciones
+                        </ul>
                     </div>
                     <div class="nav-usuario ">
                         <div class="dropdown ">
                             <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="{{ asset('img/fotoPerfil.jpg') }}" alt="icono de usuario" 
-                                class="border fotoPerfil ">
+                                <img src="{{ asset('img/fotoPerfil.jpg') }}" alt="icono de usuario"
+                                    class="border fotoPerfil ">
                             </a>
                             <div class="dropdown-menu menu-usuario ">
-                             <div class="perfil-menu d-flex gap-3  justify-content-start p-3 ">
-                                <img src="{{ asset('img/fotoPerfil.jpg') }}" alt="icono de usuario" width="30px"
-                                class="border fotoPerfil ">
-                                <div class="perfil-name">
-                                    <p class="m-0">{{  auth()->user()->username }}</p>
-                                    <span>{{ auth()->user()->name }}  {{  auth()->user()->apellido }}</span>
+                                <div class="perfil-menu d-flex gap-3  justify-content-start p-3 ">
+                                    <img src="{{ asset('img/fotoPerfil.jpg') }}" alt="icono de usuario" width="30px"
+                                        class="border fotoPerfil ">
+                                    <div class="perfil-name">
+                                        <p class="m-0">{{ auth()->user()->username }}</p>
+                                        <span>{{ auth()->user()->name }} {{ auth()->user()->apellido }}</span>
+                                    </div>
                                 </div>
-                             </div>
 
-                             <hr>
-                             <nav>
-                                <ul class="text-start list-unstyled  ">
-                                    <li><a class="dropdown-item" href="#">Planes</a></li>
-                                    <li><a class="dropdown-item" href="#">Curosos</a></li>
-                                    <li><a class="dropdown-item" href="#">Rutas de Aprendisaje</a></li>
-                                </ul>
-                             </nav>
-                             <hr>
-                             <nav>
-                                <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
-                                <li><a class="dropdown-item" href="#">Ayuda</a></li>
-                                <form action="{{ route('logout') }}" method="POST">
-                                    @csrf
-                                    <button class="btn bg-danger border-0 w-100 d-block text-light btn-cerrar mt-3 " type="submit">Cerrar Sesión</button>
-                                </form>
-                             </nav>
-                             <hr>
+                                <hr>
+                                <nav>
+                                    <ul class="text-start list-unstyled  ">
+                                        <li><a class="dropdown-item" href="#">Planes</a></li>
+                                        <li><a class="dropdown-item" href="#">Curosos</a></li>
+                                        <li><a class="dropdown-item" href="#">Rutas de Aprendisaje</a></li>
+                                    </ul>
+                                </nav>
+                                <hr>
+                                <nav>
+                                    <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                                    <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                        <button class="btn bg-danger border-0 w-100 d-block text-light btn-cerrar mt-3 "
+                                            type="submit">Cerrar Sesión</button>
+                                    </form>
+                                </nav>
+                                <hr>
 
-                          </div>
-                    </div>
-                    <div class="dropdown border rounded border-black  p-3 d-none ">
-                    @endauth
-                    <div class="dropdown border rounded border-black  p-3">
-                        <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false"
-                            data-bs-auto-close="outside">
-                            Iniciar Sesión
-                        </a>
-                        <form class="dropdown-menu p-4 " method="POST" action="{{ route('login') }}">
-                            @csrf
-                            <fieldset>
-                                <legend>Iniciar Sesión</legend>
-                                <div class="mb-3 email">
-                                    <label for="email" class="form-label email">E-mail</label>
-                                    <input type="text"
-                                        class="form-control form-control-lg @error('email') border-danger  @enderror "
-                                        id="email" placeholder="Ingresa tu E-mail" name="email">
-                                    @error('email')
-                                        <p class="fs-6  text-danger">{{ $message }}</p>
-                                    @enderror
-                                </div>
-                                <div class="mb-3 pass">
-                                    <label for="password" class="form-label pass">Contraseña</label>
-                                    <input type="password"
-                                        class="form-control form-control-lg @error('password') border-danger  @enderror "
-                                        id="password" placeholder="Ingresa tu Contraseña" name="password">
-                                    @error('email')
-                                        <p class="fs-6  text-danger">{{ $message }}</p>
-                                    @enderror
-                                </div>
-                                <div class="mb-3">
-
-                                    <a class="recuperar">¿Olvidate tu contraseña?</a>
-
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Entrar</button>
-                            </fieldset>
-                            <hr>
-                            <a href="{{ route('login-google') }}"
-                                class="btn-google d-flex justify-content-center gap-3 align-items-center ">
-                                <img src="{{ 'img/google.png' }}" alt="icono de google" width="25px">
-                                Iniciar Sesión con Google
+                            </div>
+                        </div>
+                        <div class="dropdown border rounded border-black  p-3 d-none ">
+                        @endauth
+                        <div class="dropdown border rounded border-black  p-3">
+                            <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false"
+                                data-bs-auto-close="outside">
+                                Iniciar Sesión
                             </a>
-                        </form>
+                            <form class="dropdown-menu p-4 " method="POST" action="{{ route('login') }}">
+                                @csrf
+                                <fieldset>
+                                    <legend>Iniciar Sesión</legend>
+                                    <div class="mb-3 email">
+                                        <label for="email" class="form-label email">E-mail</label>
+                                        <input type="text"
+                                            class="form-control form-control-lg @error('email') border-danger  @enderror "
+                                            id="email" placeholder="Ingresa tu E-mail" name="email">
+                                        @error('email')
+                                            <p class="fs-6  text-danger">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3 pass">
+                                        <label for="password" class="form-label pass">Contraseña</label>
+                                        <input type="password"
+                                            class="form-control form-control-lg @error('password') border-danger  @enderror "
+                                            id="password" placeholder="Ingresa tu Contraseña" name="password">
+                                        @error('email')
+                                            <p class="fs-6  text-danger">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3">
 
+                                        <a class="recuperar">¿Olvidate tu contraseña?</a>
 
-
-
-                    </div>
-                    @auth
-
-                    @endauth
-
-                    <a href="{{ route('register') }}" class="btn btn-success btn-lg "> <span>Registrarse</span> </a>
-
-                </div>
-
-                <button class="btn btn-primary d-none justify-content-center  align-items-center d-lg-none "
-                    type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-                    aria-controls="offcanvasWithBothOptions">
-                    <img src="{{ asset('img/menu.png') }}" alt="icono de menu" width="20px" class="m-0">
-                </button>
-
-                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-                    id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-                            <div class="logo">
-                                <a href="/" class="logo">
-                                    <img src="{{ asset('img/logo.png') }}" alt="">
-                                    <p>CleanKode <span>Academy</span></p>
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block">Entrar</button>
+                                </fieldset>
+                                <hr>
+                                <a href="{{ route('login-google') }}"
+                                    class="btn-google d-flex justify-content-center gap-3 align-items-center ">
+                                    <img src="{{ 'img/google.png' }}" alt="icono de google" width="25px">
+                                    Iniciar Sesión con Google
                                 </a>
-                            </div>
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <hr>
-                        <div class="d-flex  flex-column  gap-5 ">
-                            <a href="#">Planes</a>
-                            <a href="#">Cursos</a>
-
-                            <div class="dropdown border rounded border-black  p-3">
-                                <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false"
-                                    data-bs-auto-close="outside">
-                                    Iniciar Sesión
-                                </a>
-                                <form class="dropdown-menu p-4 " method="POST" action="{{ route('login') }}">
-                                    @csrf
-                                    <fieldset>
-                                        <legend>Iniciar Sesión</legend>
-                                        <div class="mb-3 email">
-                                            <label for="email" class="form-label email">E-mail</label>
-                                            <input type="text"
-                                                class="form-control form-control-lg @error('email') border-danger  @enderror "
-                                                id="email" placeholder="Ingresa tu E-mail" name="email">
-                                            @error('email')
-                                                <p class="fs-6  text-danger">{{ $message }}</p>
-                                            @enderror
-                                        </div>
-                                        <div class="mb-3 pass">
-                                            <label for="password" class="form-label pass">Contraseña</label>
-                                            <input type="password"
-                                                class="form-control form-control-lg @error('password') border-danger  @enderror "
-                                                id="password" placeholder="Ingresa tu Contraseña" name="password">
-                                            @error('email')
-                                                <p class="fs-6  text-danger">{{ $message }}</p>
-                                            @enderror
-                                        </div>
-                                        <div class="mb-3">
-
-                                            <a class="recuperar">¿Olvidate tu contraseña?</a>
-
-                                        </div>
-                                        <button type="submit" class="btn btn-success btn-block">Entrar</button>
-                                    </fieldset>
-                                    <hr>
-                                    <a href="{{ route('login-google') }}"
-                                        class="btn-google d-flex justify-content-center gap-3 align-items-center ">
-                                        <img src="{{ 'img/google.png' }}" alt="icono de google" width="25px">
-                                        Iniciar Sesión con Google
-                                    </a>
-                                </form>
+                            </form>
 
 
 
-
-                            </div>
-
-                            <a href="{{ route('register') }}" class="btn btn-success btn-lg ">
-                                <span>Registrarse</span> </a>
 
                         </div>
+                        @auth
+
+                        @endauth
+
+                        <a href="{{ route('register') }}" class="btn btn-success btn-lg "> <span>Registrarse</span>
+                        </a>
+
                     </div>
-                </div>
+
+                    <button class="btn btn-primary d-none justify-content-center  align-items-center d-lg-none "
+                        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                        aria-controls="offcanvasWithBothOptions">
+                        <img src="{{ asset('img/menu.png') }}" alt="icono de menu" width="20px" class="m-0">
+                    </button>
+
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
+                        id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                                <div class="logo">
+                                    <a href="/" class="logo">
+                                        <img src="{{ asset('img/logo.png') }}" alt="">
+                                        <p>CleanKode <span>Academy</span></p>
+                                    </a>
+                                </div>
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <hr>
+                            <div class="d-flex  flex-column  gap-5 ">
+                                <a href="#">Planes</a>
+                                <a href="#">Cursos</a>
+
+                                <div class="dropdown border rounded border-black  p-3">
+                                    <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false"
+                                        data-bs-auto-close="outside">
+                                        Iniciar Sesión
+                                    </a>
+                                    <form class="dropdown-menu p-4 " method="POST" action="{{ route('login') }}">
+                                        @csrf
+                                        <fieldset>
+                                            <legend>Iniciar Sesión</legend>
+                                            <div class="mb-3 email">
+                                                <label for="email" class="form-label email">E-mail</label>
+                                                <input type="text"
+                                                    class="form-control form-control-lg @error('email') border-danger  @enderror "
+                                                    id="email" placeholder="Ingresa tu E-mail" name="email">
+                                                @error('email')
+                                                    <p class="fs-6  text-danger">{{ $message }}</p>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-3 pass">
+                                                <label for="password" class="form-label pass">Contraseña</label>
+                                                <input type="password"
+                                                    class="form-control form-control-lg @error('password') border-danger  @enderror "
+                                                    id="password" placeholder="Ingresa tu Contraseña"
+                                                    name="password">
+                                                @error('email')
+                                                    <p class="fs-6  text-danger">{{ $message }}</p>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-3">
+
+                                                <a class="recuperar">¿Olvidate tu contraseña?</a>
+
+                                            </div>
+                                            <button type="submit" class="btn btn-success btn-block">Entrar</button>
+                                        </fieldset>
+                                        <hr>
+                                        <a href="{{ route('login-google') }}"
+                                            class="btn-google d-flex justify-content-center gap-3 align-items-center ">
+                                            <img src="{{ 'img/google.png' }}" alt="icono de google" width="25px">
+                                            Iniciar Sesión con Google
+                                        </a>
+                                    </form>
+
+
+
+
+                                </div>
+
+                                <a href="{{ route('register') }}" class="btn btn-success btn-lg ">
+                                    <span>Registrarse</span> </a>
+
+                            </div>
+                        </div>
+                    </div>
 
 
         </nav>
@@ -282,7 +285,7 @@
                             <a href="#">Terminos y Condiciones</a>
                             <a href="#">Politicas de Privacidad</a>
                             <a href="#">Contacto</a>
-                            <a href="{{route('login-codemaster')}}">CodeMasters</a>
+                            <a href="{{ route('login-codemaster') }}">CodeMasters</a>
                         </nav>
                     </div>
                     <div class="col-3 d-flex flex-column gap-3 ">
@@ -311,11 +314,22 @@
 
     </footer>
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
     <script>
         var quill = new Quill('#editor', {
-          theme: 'snow'
+            theme: 'snow'
         });
-      </script>
+
+        // Evento que se dispara al enviar el formulario
+        document.querySelector('.form-nuevoCurso').onsubmit = function() {
+            // Obtén el contenido del editor
+            var descripcionCurso = quill.root.innerHTML;
+
+            
+            // Asigna el contenido al campo oculto
+            document.querySelector('#descripcionCurso').value = descripcionCurso;
+        };
+    </script>
     @vite('resources/js/app.js')
 
 </body>

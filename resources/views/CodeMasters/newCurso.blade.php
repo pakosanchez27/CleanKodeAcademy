@@ -33,52 +33,64 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <!-- Form -->
-                    <form action="{{ route('newCurso.store') }}" class="row formulario-perfil" method="POST"
+                    <form action="{{ route('newCurso.store') }}" class="row formulario-perfil form-nuevoCurso" method="POST" novalidate
                         enctype="multipart/form-data">
                         @csrf
                         <div class="col ">
                             <div class="mt-3">
                                 <label for="nombre-curso" class="form-label fw-semibold">Nombre del Curso
                                 </label>
-                                <input class="form-control" id="nombre-curso" placeholder="Ej. Fundamentos de programacion"
-                                    name="nombre-curso" type="text" required="">
+                                <input class="form-control  @error('nombreCurso') border-danger  @enderror"
+                                    id="nombre-curso" placeholder="Ej. Fundamentos de programacion" name="nombreCurso"
+                                    type="text" value="{{ old('nombreCurso') }}">
+                                @error('nombreCurso')
+                                    <p class="fs-6 text-danger">{{ $message }}</p>
+                                @enderror
                                 <small>Coloca un nombre breve, pero descriptivo de tu curso.</small>
                             </div>
                             <div class="col mt-3">
                                 <label for="categoria" class="form-label fw-semibold">Categoria
                                 </label>
-                                <select name="categoria" id="categoria" class="w-100">
-                                    <option selected disabled>--Selecciona una categoria--</option>
+                                <select name="idCategoria" id="categoria"
+                                    class="w-100 @error('nombreCurso') border-danger @enderror"
+                                    value="{{ old('idCategoria') }}">
+                                    <option selected disabled>--Selecciona una categoría--</option>
                                     @foreach ($categorias as $categoria)
-                                        <option value="{{ $categoria->idCategoria }}">{{ $categoria->nomCategoria }}
+                                        <option value="{{ $categoria->idCategoria }}"
+                                            {{ old('idCategoria') == $categoria->idCategoria ? 'selected' : '' }}>
+                                            {{ $categoria->nomCategoria }}
                                         </option>
                                     @endforeach
                                 </select>
+
+                                @error('idCategoria')
+                                    <p class="fs-6 text-danger">{{ $message }}</p>
+                                @enderror
                                 <small>Selecciona la categoria a la que pertenece tu curso.</small>
                             </div>
 
                             <div class="col mt-3">
-                                <label for="" class="form-label fw-semibold">Escribe una Descripción Completa
-                                </label>
+                                <label for="" class="form-label fw-semibold">Escribe una Descripción Completa</label>
                                 <div id="editor" class="ql-container ql-snow">
-
-                                    <div class="ql-editor" data-gramm="false" contenteditable="true">
-                                        <p>Coloca todos los detalles de tu curso</p>
-                                        <p><br></p>
-                                    </div>
-                                    <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
-                                    <div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer"
-                                            target="_blank" href="about:blank"></a><input type="text"
-                                            data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a
-                                            class="ql-action" name="descripcion"></a><a class="ql-remove"></a></div>
+                                    {!! old('descripcionCurso') !!} <!-- Mostrar contenido antiguo en el editor -->
                                 </div>
+                                <input type="hidden" name="descripcionCurso" id="descripcionCurso" value="{{ old('descripcionCurso') }}">
                             </div>
+                            
+                            @error('descripcionCurso')
+                                <p class="fs-6 text-danger">{{ $message }}</p>
+                            @enderror
+                            
+
                             <div class="col mt-3">
                                 <label for="">Sube la foto miniatura de tu curso.</label>
                                 <div class="input-group mb-3">
                                     <label class="input-group-text" for="inputGroupFile01">Upload</label>
                                     <input type="file" class="form-control" id="inputGroupFile01"
-                                        accept="image/pmg, image/jpeg" name="foto-curso">
+                                        accept="image/pmg, image/jpeg" name="FotoCurso">
+                                    @error('FotoCurso')
+                                        <p class="fs-6 text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col mt-3">
@@ -87,6 +99,9 @@
                                     <label class="input-group-text" for="inputGroupFile01">Upload</label>
                                     <input type="file" class="form-control" id="inputGroupFile01" accept="video/*"
                                         name="videoIntro">
+                                    @error('videoIntro')
+                                        <p class="fs-6 text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col mt-5 text-end ">
