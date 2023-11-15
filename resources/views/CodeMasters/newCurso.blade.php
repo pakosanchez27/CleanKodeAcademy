@@ -87,7 +87,7 @@
                                 <div class="input-group mb-3">
                                     <label class="input-group-text" for="inputGroupFile01">Upload</label>
                                     <input type="file" class="form-control" id="inputGroupFile01"
-                                        accept="image/pmg, image/jpeg" name="FotoCurso">
+                                        accept="image/*" name="FotoCurso">
                                     @error('FotoCurso')
                                         <p class="fs-6 text-danger">{{ $message }}</p>
                                     @enderror

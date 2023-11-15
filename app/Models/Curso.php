@@ -15,7 +15,8 @@ class Curso extends Model
         'descripcionCurso',
         'FotoCurso',
         'videoIntro',
-        'idCategoria'
+        'idCategoria',
+        'create_at'
         // Otros campos que puedas asignar masivamente
     ];
 

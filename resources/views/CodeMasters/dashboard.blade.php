@@ -267,15 +267,26 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($resultados as $resultado)
+                                 
+                                   
                                     <tr>
                                         <td>
                                             <img class="rounded" src="{{ asset('storage/images/' . $resultado->FotoCurso) }}" alt="Imagen del curso" width="80px">
 
                                             </td>
                                         <td class="fw-semibold text-start ">{{$resultado->nombreCurso}}</td>
-                                        <td class="text-start ">12/12/2021</td>
+                                        <td class="text-start ">{{$fechaFormat = date('d-m-Y', strtotime($resultado->created_at )) }}</td>
                                         <td class="text-start">
+
+
+                                            @if ($resultado->estado == 1)
                                             <span class="badge bg-success">Activo</span>
+                                            @elseif ($resultado->estado == 2)
+                                            <span class="badge bg-warning">Pendiente</span>
+                                            @else 
+                                            <span class="badge bg-info">En proceso</span>
+                                            @endif
+                                            
                                         </td>
                                         <td>
                                             <div class="btn-group dropstart">
