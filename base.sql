@@ -59,7 +59,23 @@ CREATE TABLE CURSO (
 
 );
 
+CREATE TABLE capitulos (
+    idCapitulo int unsigned PRIMARY KEY,
+    nombreCapitulo VARCHAR(255),
+    idCurso int unsigned,
+    FOREIGN KEY (idCurso) REFERENCES cursos(idCurso)
+);
 
+CREATE TABLE clases (
+    idClase int unsigned PRIMARY KEY,
+    nombreClase VARCHAR(255),
+    duracionClase DECIMAL(8, 2),
+    descripcionClase TEXT,
+    videoClase VARCHAR(255),
+    recursoClase VARCHAR(255),
+    idCapitulo int unsigned,
+    FOREIGN KEY (idCapitulo) REFERENCES capitulos(idCapitulo)
+);
 
 CREATE TABLE ESTADOCURSO (
     idEstado INT PRIMARY KEY,

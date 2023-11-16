@@ -9,11 +9,34 @@ use Illuminate\Http\Request;
 
 class NuevoCursoController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+
         $categorias = Categorias::all();
 
-        return view('CodeMasters.newCurso', compact('categorias'));
+
+        if($request->input('modo') == 'update'){
+            $curso = Curso::find($request->input('idCurso'));
+            $datosCurso = array(
+                'idCurso' => $curso->idCurso,
+                'nombreCurso' => $curso->nombreCurso,
+                'descripcionCurso' => $curso->descripcionCurso,
+                'FotoCurso' => $curso->FotoCurso,
+                'videoIntro' => $curso->videoIntro,
+                'idCategoria' => $curso->idCategoria,
+            );
+            
+            return view('CodeMasters.editCurso', compact('categorias', 'datosCurso'));
+        }else{
+            
+            return view('CodeMasters.newCurso', compact('categorias'));
+        }
+
+        
+
+        
+
+    
     }
 
     public function store(Request $request)
@@ -47,6 +70,10 @@ class NuevoCursoController extends Controller
 
 
         return redirect()->route('Master.index')->with('success', 'Curso creado correctamente');
+    }
+
+    public function update(Request $request){
+        dd($request->all());
     }
 
     private function generateUniqueFileName($file)

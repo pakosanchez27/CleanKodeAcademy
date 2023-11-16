@@ -10,6 +10,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\controllerAuthGoogle;
 use App\Http\Controllers\NuevoCursoController;
 use App\Http\Controllers\PostMasterController;
+use App\Http\Controllers\CrearClasesController;
 use App\Http\Controllers\ConfiguracionController;
 use App\Http\Controllers\loginCodeMasterController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -71,3 +72,10 @@ Route::get('/Cleankoders/config', [ConfiguracionController::class, 'index'])->na
 // Formulario para crear un curso
 
 Route::post('/CodeMaster/newCurso', [NuevoCursoController::class, 'store'])->name('newCurso.store');
+Route::post('/CodeMaster/newCurso', [NuevoCursoController::class, 'update'])->name('newCurso.update');
+
+
+Route::get('/CodeMaster/clases', [CrearClasesController::class, 'index'])->name('clases.index');
+
+Route::post('/CodeMaster/clases', [CrearClasesController::class, 'store'])->name('clases.store');
+
