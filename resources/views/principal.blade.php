@@ -5,15 +5,18 @@
 @endsection
 
 @section('contenido')
-    <section class="container-fluid bg-inicio">
+    <section class="container-fluid bg-primario text-light ">
         <div class="container">
-            <div class="row d-flex flex-column mt-md-5 texto-header">
-                <div class="col-12 col-md-9 col-lg-8 mt-lg-5  ">
-                    <h1 class=" text-uppercase fw-bold ">Tu futuro profecional esta a unos cuantos clicks</h1>
+            <div class="row texto-header align-items-center p-5 p-lg-0 ">
+                <div class=" col-12 col-lg-7 col-md-9 col-lg-8 mt-lg-5 ">
+                    <h1 class=" text-uppercase fw-bold h1 ">Tu futuro profecional esta a unos cuantos clicks</h1>
                     <p class="mb-5">Contamos con curso que te ayudara a alcanzar tu objetivo profesional en la industria de
                         la
                         TI.</p>
                     <a href="#" class=" btn btn-negro">Comienza ahora</a>
+                </div>
+                <div class="col-12 col-lg-4 mt-5 mt-lg-0">
+                    <img src="{{asset('img/chica-bg.png')}}" alt="" width="400">
                 </div>
             </div>
         </div>
