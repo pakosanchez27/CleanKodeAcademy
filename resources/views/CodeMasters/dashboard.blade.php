@@ -5,7 +5,44 @@
 @endsection
 
 
+@if(session('success'))
+
+<div class="toast fade show  Notificacion sombra p-3  " role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header Notifi-exito">
+      <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%"></rect></svg>
+      <strong class="me-auto h4">Notificación</strong>
+     
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+       <p>{{ session('success') }}</p>
+    </div>
+  </div>
+  
+@endif
+
+@if(session('error'))
+
+<div class="toast fade show  Notificacion sombra p-3  " role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header Notifi-error">
+      <svg class="bd-placeholder-img rounded me-2 " width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" ></rect></svg>
+      <strong class="me-auto h4">Notificación</strong>
+     
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+       <p>{{ session('error') }}</p>
+    </div>
+  </div>
+  
+@endif
+
+
+
 @section('contenido')
+    
+
+
     <div class="container-fluid">
         <section class="container portada-master mt-3 sombra">
             <div class="row row fondoPortada p-3">
@@ -266,13 +303,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                     
                                     @foreach ($resultados as $resultado)
                                         <tr>
                                             <td>
                                                 <img class="rounded"
                                                     src="{{ asset('storage/images/' . $resultado->FotoCurso) }}"
+                                                  
                                                     alt="Imagen del curso" width="80px">
-
+                                                    
+                                                
                                             </td>
                                             <td class="fw-semibold text-start ">{{ $resultado->nombreCurso }}</td>
                                             <td class="text-start ">
@@ -1163,7 +1203,7 @@
                                     <td>$15000</td>
                                     <td>06/10/2023</td>
                                     <td>
-                                        <a href="#" class="descargar text-warning"><svg
+                                        <a href="{{route('pagosPDF.index')}}" class="descargar text-warning"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="25 " height="25 "
                                                 fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd"

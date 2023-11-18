@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\pagosPDF;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
 use Laravel\Socialite\Facades\Socialite;
@@ -72,10 +74,17 @@ Route::get('/Cleankoders/config', [ConfiguracionController::class, 'index'])->na
 // Formulario para crear un curso
 
 Route::post('/CodeMaster/newCurso', [NuevoCursoController::class, 'store'])->name('newCurso.store');
-Route::post('/CodeMaster/newCurso', [NuevoCursoController::class, 'update'])->name('newCurso.update');
+Route::put('/curso/{idCurso}', [NuevoCursoController::class, 'update'])->name('newCurso.update');
+
 
 
 Route::get('/CodeMaster/clases', [CrearClasesController::class, 'index'])->name('clases.index');
 
 Route::post('/CodeMaster/clases', [CrearClasesController::class, 'store'])->name('clases.store');
+
+
+
+// PDFS
+
+Route::get('/CodeMaster/PdfController', [PdfController::class, 'index'])->name('pagosPDF.index');
 

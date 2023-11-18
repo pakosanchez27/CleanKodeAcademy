@@ -6,7 +6,10 @@
     background-color: v.$primario;
     border: none;
     font-size: 1.6rem;
- 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 2rem;
 }
 
 .btn-block{

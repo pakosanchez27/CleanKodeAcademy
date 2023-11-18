@@ -122,3 +122,20 @@ p.text-danger {
     background-color: v.$primario;
 }
 
+
+.Notificacion{
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+}
+
+.Notifi-error{
+    svg{
+        fill: rgb(153, 14, 14);
+    }
+}
+.Notifi-exito{
+    svg{
+        fill: rgb(14, 153, 14);
+    }
+}

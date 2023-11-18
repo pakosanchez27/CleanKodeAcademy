@@ -6,23 +6,23 @@
 
 
 @section('contenido')
-    <div class="container-fluid bg-primario">
-        <div class="row d-flex justify-content-between  align-items-center w-100 banner-nuevoCurso">
-            <div class="col">
+    <div class="container-fluid bg-primario d-flex justify-content-center ">
+        <div class="row container-fluid container-md d-flex w-100 w-md-75 banner-nuevoCurso ">
+            <div class="col-md-12 col-lg-7">
                 <h2 class="m-0  fw-bold text-light ">Agrega un Nuevo Curso.</h2>
                 <p class="text-light fw-semibold ">¡Comparte tu conocimiento! Ingresa los detalles de tu nuevo curso en el
                     siguiente formulario.</p>
             </div>
-            <div class="col text-end">
-                <a href="{{ route('Master.index') }}" class="btn bg-black  text-light ">Regresar</a>
+            <div class="col-md-12 col-lg-5 d-flex justify-content-lg-end align-content-center   ">
+                <a href="{{ route('Master.index') }}" class="btn bg-black  text-light w-50 mt-5 mt-lg-0    h-lg-75  ">Regresar</a>
             </div>
 
         </div>
     </div>
 
 
-    <div class="container d-flex justify-content-center mt-5  ">
-        <div class="w-75 bg-blanco p-5 sombra " id="vista-paso1">
+    <div class="container  d-flex justify-content-center mt-5  ">
+        <div class="w-100 w-md-75 bg-blanco p-5 sombra " id="vista-paso1">
             <!-- Card -->
             <div class="w-100 mb-4 rounded ">
                 <!-- Card Header -->
@@ -85,8 +85,8 @@
                             <div class="col mt-3">
                                 <label for="">Sube la foto miniatura de tu curso.</label>
                                 <div class="input-group mb-3">
-                                    <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                                    <input type="file" class="form-control" id="inputGroupFile01"
+                                    <label class="imagen" for="inputGroupFile01">Upload</label>
+                                    <input type="file" class="form-control" id="imagen"
                                         accept="image/*" name="FotoCurso">
                                     @error('FotoCurso')
                                         <p class="fs-6 text-danger">{{ $message }}</p>
@@ -95,9 +95,9 @@
                             </div>
                             <div class="col mt-3">
                                 <label for="">Sube el video Introductorio.</label>
-                                <div class="input-group mb-3">
-                                    <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                                    <input type="file" class="form-control" id="inputGroupFile01" accept="video/*"
+                                <div class="video">
+                                    <label class="input-group-text" for="video">Upload</label>
+                                    <input type="file" class="form-control" id="video" accept="video/*"
                                         name="videoIntro">
                                     @error('videoIntro')
                                         <p class="fs-6 text-danger">{{ $message }}</p>

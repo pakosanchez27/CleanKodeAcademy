@@ -6,14 +6,14 @@
 
 
 @section('contenido')
-    <div class="container-fluid bg-primario">
-        <div class="row d-flex justify-content-between  align-items-center w-100 banner-nuevoCurso">
-            <div class="col">
-                <h2 class="m-0  fw-bold text-light ">Editar Curso. </h2>
-                <p class="text-light fw-semibold ">Edita los aspectos generales del curso</p>
+    <div class="container-fluid bg-primario d-flex justify-content-center ">
+        <div class="row container-fluid container-md d-flex w-100 w-md-75 banner-nuevoCurso ">
+            <div class="col-md-12 col-lg-7">
+                <h2 class="m-0  fw-bold text-light ">Editar Curso : {{ $datosCurso['nombreCurso'] }}.</h2>
+                <p class="text-light fw-semibold ">Edita los aspectos generales de tu curso</p>
             </div>
-            <div class="col text-end">
-                <a href="{{ route('Master.index') }}" class="btn bg-black  text-light ">Regresar</a>
+            <div class="col-md-12 col-lg-5 d-flex justify-content-lg-end align-content-center   ">
+                <a href="{{ route('Master.index') }}" class="btn bg-black  text-light  ">Regresar</a>
             </div>
 
         </div>
@@ -21,7 +21,7 @@
 
 
     <div class="container d-flex justify-content-center mt-5  ">
-        <div class="w-75 bg-blanco p-5 sombra " id="vista-paso1">
+        <div class="w-100 w-md-75 bg-blanco p-5 sombra " id="vista-paso1">
             <!-- Card -->
             <div class="w-100 mb-4 rounded ">
                 <!-- Card Header -->
@@ -32,8 +32,9 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <!-- Form -->
-                    <form action="" class="row formulario-perfil form-nuevoCurso" method="POST" novalidate
+                    <form action="{{route('newCurso.update', ['idCurso' => $datosCurso['idCurso']]) }}" class="row formulario-perfil form-nuevoCurso" method="POST" novalidate
                         enctype="multipart/form-data">
+                        @method('PUT')
                         @csrf
                         <div class="col ">
                             <div class="mt-3">
@@ -41,7 +42,7 @@
                                 </label>
                                 <input class="form-control  @error('nombreCurso') border-danger  @enderror"
                                     id="nombre-curso" placeholder="Ej. Fundamentos de programacion" name="nombreCurso"
-                                    type="text" value="{{$datosCurso['nombreCurso'] }}">
+                                    type="text" value="{{ $datosCurso['nombreCurso'] }}">
                                 @error('nombreCurso')
                                     <p class="fs-6 text-danger">{{ $message }}</p>
                                 @enderror
@@ -56,7 +57,7 @@
                                     <option selected disabled>--Selecciona una categoría--</option>
                                     @foreach ($categorias as $categoria)
                                         <option value="{{ $categoria->idCategoria }}"
-                                            {{ $datosCurso['idCategoria']  == $categoria->idCategoria ? 'selected' : '' }}>
+                                            {{ $datosCurso['idCategoria'] == $categoria->idCategoria ? 'selected' : '' }}>
                                             {{ $categoria->nomCategoria }}
                                         </option>
                                     @endforeach
@@ -69,34 +70,41 @@
                             </div>
 
                             <div class="col mt-3">
-                                <label for="" class="form-label fw-semibold">Escribe una Descripción Completa</label>
+                                <label for="" class="form-label fw-semibold">Escribe una Descripción
+                                    Completa</label>
                                 <div id="editor" class="ql-container ql-snow">
-                                    {{$datosCurso['descripcionCurso'] }}
+                                    @php
+                                        $texto = $datosCurso['descripcionCurso'];
+                                        echo $texto;
+                                    @endphp
+
+
                                 </div>
-                                <input type="hidden" name="descripcionCurso" id="descripcionCurso" value="{{ old('descripcionCurso') }}">
+                                <input type="hidden" name="descripcionCurso" id="descripcionCurso"
+                                    value="{{ old('descripcionCurso') }}">
                             </div>
-                            
+
                             @error('descripcionCurso')
                                 <p class="fs-6 text-danger">{{ $message }}</p>
                             @enderror
-                            
+
 
                             <div class="col mt-3">
                                 <label for="">Sube la foto miniatura de tu curso.</label>
                                 <div class="input-group mb-3">
-                                    <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                                    <input type="file" class="form-control" id="inputGroupFile01"
-                                        accept="image/*" name="FotoCurso">
+                                    <label class="input-group-text" for="imagen">Upload</label>
+                                    <input type="file" class="form-control" id="imagen" accept="image/*"
+                                        name="FotoCurso">
                                     @error('FotoCurso')
                                         <p class="fs-6 text-danger">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
                             <div class="col mt-3">
-                                <label for="">Sube el video Introductorio.</label>
+                                <label for="video">Sube el video Introductorio.</label>
                                 <div class="input-group mb-3">
-                                    <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                                    <input type="file" class="form-control" id="inputGroupFile01" accept="video/*"
+                                    <label class="input-group-text" for="video">Upload</label>
+                                    <input type="file" class="form-control" id="video" accept="video/*"
                                         name="videoIntro">
                                     @error('videoIntro')
                                         <p class="fs-6 text-danger">{{ $message }}</p>
@@ -104,7 +112,7 @@
                                 </div>
                             </div>
                             <div class="col mt-5 text-end ">
-                                <input id="siguiente" class="btn bg-primario text-light " value="Crear Curso"
+                                <input id="siguiente" class="btn bg-primario text-light " value="Guardar"
                                     type="submit">
                             </div>
                         </div>

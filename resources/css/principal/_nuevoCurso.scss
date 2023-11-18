@@ -1,5 +1,12 @@
+@import "resources/css/base/_variables.scss";
+@import "resources/css/base/_mixins.scss";
+
+
 .banner-nuevoCurso{
-    padding: 5rem 10rem;
+   padding: 5rem 2rem; 
+    @include tablet{
+        padding: 5rem 10rem;
+    }
 }
 
 .procesos-Crear{

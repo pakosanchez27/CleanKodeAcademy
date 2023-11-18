@@ -19,14 +19,18 @@
         <nav class="container d-flex justify-content-between align-items-center  navegacion">
             <div class="logo">
                 @auth
-                    <a href="{{ route('posts.index') }}" class="logo">
-                    @else
-                        <a href="/" class="logo">
-                        @endauth
+                    @if (auth()->user()->idRol == 2)
+                        <a href="{{ route('Master.index') }}" class="logo">
+                        @else
+                            <a href="{{ route('posts.index') }}" class="logo">
+                    @endif
+                @else
+                    <a href="/" class="logo">
+                    @endauth
 
-                        <img src="{{ asset('img/logo.png') }}" alt="">
-                        <p class="d-none d-lg-flex ">CleanKode <span>Academy</span></p>
-                    </a>
+                    <img src="{{ asset('img/logo.png') }}" alt="">
+                    <p class="d-none d-lg-flex ">CleanKode <span>Academy</span></p>
+                </a>
             </div>
             @auth
                 <div class="W-100 buscar  d-none d-md-flex  ">
@@ -325,7 +329,7 @@
             // Obtén el contenido del editor
             var descripcionCurso = quill.root.innerHTML;
 
-            
+
             // Asigna el contenido al campo oculto
             document.querySelector('#descripcionCurso').value = descripcionCurso;
         };
