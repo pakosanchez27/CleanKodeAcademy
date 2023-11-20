@@ -14,6 +14,7 @@ use App\Http\Controllers\NuevoCursoController;
 use App\Http\Controllers\PostMasterController;
 use App\Http\Controllers\CrearClasesController;
 use App\Http\Controllers\ConfiguracionController;
+use App\Http\Controllers\CrearCapituloController;
 use App\Http\Controllers\loginCodeMasterController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -87,4 +88,11 @@ Route::post('/CodeMaster/clases', [CrearClasesController::class, 'store'])->name
 // PDFS
 
 Route::get('/CodeMaster/PdfController', [PdfController::class, 'index'])->name('pagosPDF.index');
+
+
+// Crar Capitulo
+Route::post('/CodeMaster/clases', [CrearCapituloController::class, 'store'])->name('crearCapitulo.store');
+Route::put('/crearCapitulo/{idCapitulo}',[CrearCapituloController::class, 'update'])->name('crearCapitulo.update');
+
+Route::post('/CodeMaster/clases/crear', [CrearClasesController::class, 'store'])->name('crearClase.store');
 

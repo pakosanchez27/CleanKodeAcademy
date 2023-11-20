@@ -320,7 +320,7 @@
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
     <script>
-        var quill = new Quill('#editor', {
+     var quill = new Quill('#editor', {
             theme: 'snow'
         });
 
@@ -333,6 +333,32 @@
             // Asigna el contenido al campo oculto
             document.querySelector('#descripcionCurso').value = descripcionCurso;
         };
+
+        // Obtén todos los formularios con la clase .form-nuevoCurso
+var forms = document.querySelectorAll('.form-nuevoCurso2');
+
+forms.forEach(form => {
+    var quill = new Quill(form.querySelector('#editor2'), {
+        theme: 'snow'
+    });
+
+    // Evento que se dispara al enviar cada formulario
+    form.onsubmit = function(event) {
+        event.preventDefault(); // Evitar la acción por defecto del formulario
+
+        // Obtén el contenido del editor específico de este formulario
+        var descripcionCurso = quill.root.innerHTML;
+
+        // Encuentra el campo oculto dentro del formulario actual y asigna el contenido
+        form.querySelector('#descripcionCurso').value = descripcionCurso;
+
+        // Envía el formulario
+        this.submit();
+    };
+});
+
+
+        
     </script>
     @vite('resources/js/app.js')
 

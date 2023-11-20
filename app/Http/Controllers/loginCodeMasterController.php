@@ -30,7 +30,7 @@ class loginCodeMasterController extends Controller
             return back()->with('mensaje', 'Eres un Cleankoder. Haz clic en el enlace de abajo');
             
         } else {
-            return redirect()->route('Master.index');
+            return redirect()->route('Master.index',['idUser' => $user->id] );
         }
     }
 }

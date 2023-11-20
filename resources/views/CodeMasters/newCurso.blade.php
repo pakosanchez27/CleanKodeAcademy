@@ -33,7 +33,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <!-- Form -->
-                    <form action="{{ route('newCurso.store') }}" class="row formulario-perfil form-nuevoCurso" method="POST" novalidate
+                    <form action="{{ route('newCurso.store', ['idUser' => $idUser]) }}" class="row formulario-perfil form-nuevoCurso" method="POST" novalidate
                         enctype="multipart/form-data">
                         @csrf
                         <div class="col ">

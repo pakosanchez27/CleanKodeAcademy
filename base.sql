@@ -59,6 +59,12 @@ CREATE TABLE CURSO (
 
 );
 
+ALTER TABLE Cursos
+
+ADD CONSTRAINT fk_user
+FOREIGN KEY (idUser) REFERENCES USERS(id);
+
+
 CREATE TABLE capitulos (
     idCapitulo int AUTO_INCREMENT PRIMARY KEY,
     nombreCapitulo VARCHAR(255),

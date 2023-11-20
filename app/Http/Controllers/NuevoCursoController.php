@@ -12,12 +12,13 @@ class NuevoCursoController extends Controller
 {
     public function index(Request $request)
     {
-
+        
         $categorias = Categorias::all();
-
+   
 
         if ($request->input('modo') == 'update') {
             $curso = Curso::find($request->input('idCurso'));
+            $idUser = $request->input('idUser');
             $datosCurso = array(
                 'idCurso' => $curso->idCurso,
                 'nombreCurso' => $curso->nombreCurso,
@@ -29,15 +30,18 @@ class NuevoCursoController extends Controller
 
 
 
-            return view('CodeMasters.editCurso', compact('categorias', 'datosCurso'));
+            return view('CodeMasters.editCurso', compact('categorias', 'datosCurso', 'idUser'));
         } else {
-
-            return view('CodeMasters.newCurso', compact('categorias'));
+            $idUser = $request->input('idUser');
+            return view('CodeMasters.newCurso', compact('categorias', 'idUser'));
         }
     }
 
     public function store(Request $request)
     {
+        $idUser = $request->input('idUser');
+        
+
         $this->validate($request, [
             'nombreCurso' => 'required|max:255',
             'descripcionCurso' => 'required|string|min:1',
@@ -59,12 +63,14 @@ class NuevoCursoController extends Controller
         $request->file('videoIntro')->storeAs('public/videos', $videoIntroName);
 
 
-        Curso::create([
+        Curso::create([ 
             'nombreCurso' => $request->nombreCurso,
             'descripcionCurso' => $request->descripcionCurso,
             'FotoCurso' => $fotoCursoName,
             'videoIntro' => $videoIntroName,
             'idCategoria' => $request->idCategoria,
+            'idEstado' => 3,
+            'idUser' => $idUser
         ]);
 
         return redirect()->route('Master.index')->with('success', 'Curso creado correctamente');
@@ -85,6 +91,7 @@ class NuevoCursoController extends Controller
             'nombreCurso' => 'required|max:255',
             'descripcionCurso' => 'required|string|min:1',
             'idCategoria' => 'required|exists:categorias,idCategoria', // Corregir la validación
+            
         ]);
        
         $curso->nombreCurso = $request->input('nombreCurso');
