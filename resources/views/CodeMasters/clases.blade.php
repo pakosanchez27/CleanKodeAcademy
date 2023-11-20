@@ -91,7 +91,8 @@
                                             d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
                                         <path fill-rule="evenodd"
                                             d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                    </svg> </a>
+                                    </svg> 
+                                </a>
 
                                 <div class="modal fade" id="exampleModal{{ $capitulo->idCapitulo }}" tabindex="-1"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -142,12 +143,59 @@
                                 @if ($clasesPorCapitulo->has($capitulo->idCapitulo))
                                     @foreach ($clasesPorCapitulo[$capitulo->idCapitulo] as $clase)
                                         <div class="clase  d-flex justify-content-between align-items-center ">
-                                            <div class="">
-                                                <h4 class="h4">{{ $clase->nombreClase }}</h4>
-                                                <div class="">
-                                                    <p class="m-0 fw-light fst-italic  h5">Duracion: 1:30</p>
-                                                    <p class="m-0 fw-light fst-italic  h5">Fecha de creacion: 12/12/2021
-                                                    </p>
+                                            <div class="row w-100 ">
+                                                <div class="col-6">
+                                                    <h4 class="h4">{{ $clase->nombreClase }}</h4>
+                                                    <div class="">
+                                                        <p class="m-0 fw-light fst-italic  h5">Duracion: 1:30</p>
+                                                        <p class="m-0 fw-light fst-italic  h5">Fecha de creacion:
+                                                            12/12/2021
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 d-flex gap-3 justify-content-end align-items-center  ">
+                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleVideo{{ $clase->idClase }}">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                            height="16" fill="currentColor"
+                                                            class="bi bi-file-earmark-play-fill" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM6 6.883a.5.5 0 0 1 .757-.429l3.528 2.117a.5.5 0 0 1 0 .858l-3.528 2.117a.5.5 0 0 1-.757-.43V6.884z" />
+                                                        </svg>Preview
+                                                    </button>
+                                                    @if ($clase->recursoClase)
+                                                    <a href="{{asset('storage/recursos/' . $clase->recursoClase)}}" target="_blank" class="btn bg-info  text-light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-fill" viewBox="0 0 16 16">
+                                                        <path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3z"/>
+                                                      </svg>Recurso</a>
+                                                    @endif
+                                                    <div class="container ">
+                                                           <!-- Modal -->
+                                                    <div class="modal fade " id="exampleVideo{{ $clase->idClase }}"
+                                                        tabindex="-1" aria-labelledby="exampleModalLabel"
+                                                        aria-hidden="true">
+                                                        <div
+                                                            class="modal-dialog   ">
+                                                            <div class="modal-content previewVideo ">
+                                                                <div class="modal-header">
+                                                                    <h1 class="modal-title fs-5 fw-semibold "
+                                                                        id="exampleModalLabel">
+                                                                        Preview del Video</h1>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="">
+                                                                        <video
+                                                                            src="{{ asset('/storage/videos/' . $clase->videoClase) }}"
+                                                                            controls width="100%"></video>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
                                                 </div>
 
 
@@ -174,109 +222,112 @@
                                         </div>
                                         <hr>
                                     @endforeach
-                                @else{
+                                @else
                                     <div class="alert alert-info text-center fw-semibold " role="alert">
                                         <p>Aun no hay Clases para este capitulo</p>
                                     </div>
-                                    }
                                 @endif
 
                             </div>
-                          
+
                             <button type="button" class="btn btn-primary h5" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop{{ $capitulo->idCapitulo }}">
                                 <p class="h5">Agregar Clase</p>
                             </button>
-              
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop{{ $capitulo->idCapitulo }}" data-bs-backdrop="static"
-                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 fw-semibold " id="staticBackdropLabel">Agregar
-                                    Clase</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop{{ $capitulo->idCapitulo }}"
+                                data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5 fw-semibold " id="staticBackdropLabel">Agregar
+                                                Clase</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form
+                                                action="{{ route('crearClase.store', ['idCapitulo' => $capitulo->idCapitulo]) }}"
+                                                method="POST" enctype="multipart/form-data" class="form-nuevoCurso2">
+
+                                                @csrf
+                                                <div class="mb-3">
+                                                    <label for="clase" class="form-label">Nombre de la clase</label>
+                                                    <input class="form-control" type="text"
+                                                        placeholder="Ej. Variables con JS"
+                                                        aria-label="default input example" name="nombreClase"
+                                                        value="{{ old('nombreClase') }}">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="clase" class="form-label">Duración</label>
+                                                    <input class="form-control" type="text" placeholder="Ej. 3.51"
+                                                        aria-label="default input example" name="duracionClase"
+                                                        value="{{ old('duracionClase') }}">
+                                                </div>
+
+                                                <div class="col mt-3">
+                                                    <label for="descripcionCurso"
+                                                        class="form-label fw-semibold form-nuevoCurso">Escribe una
+                                                        Descripción Completa</label>
+                                                    <div id="editor2" class="ql-container ql-snow">
+                                                        {!! old('descripcionClase') !!}
+                                                        <!-- Mostrar contenido antiguo en el editor -->
+                                                    </div>
+                                                    <input type="hidden" name="descripcionClase" id="descripcionCurso"
+                                                        value="{{ old('descripcionClase') }}">
+                                                </div>
+
+                                                @error('descripcionClase')
+                                                    <p class="fs-6 text-danger">{{ $message }}</p>
+                                                @enderror
+
+                                                <div class="input-group mb-3 d-flex flex-column ">
+                                                    <label for="videoClase" class="form-label">Video de la clase</label>
+                                                    <div class=" d-flex ">
+                                                        <label class="input-group-text btn text-light "
+                                                            for="videoClase">Upload</label>
+                                                        <input type="file" class="form-control" id="videoClase"
+                                                            name="videoClase" accept="video/*">
+                                                    </div>
+
+                                                </div>
+                                                @error('videoClase')
+                                                    <p class="fs-6 text-danger">{{ $message }}</p>
+                                                @enderror
+                                                <div class="input-group mb-3 d-flex flex-column ">
+                                                    <label for="clase" class="form-label">Recursos de la clase</label>
+                                                    <div class=" d-flex ">
+                                                        <label class="input-group-text btn text-light "
+                                                            for="clase">Upload</label>
+                                                        <input type="file" class="form-control" id="clase"
+                                                            name="recursoClase" accept=".pdf, .docx, .doc">
+                                                    </div>
+                                                    @error('recursoClase')
+                                                        <p class="fs-6 text-danger">{{ $message }}</p>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-bs-dismiss="modal">Cerrar</button>
+                                                    <input type="submit" class="btn btn-success ">
+                                                </div>
+                                            </form>
+                                        </div>
+
+
+                                    </div>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                                <form action="{{ route('crearClase.store', ['idCapitulo' => $capitulo->idCapitulo]) }}"
-                                    method="POST" enctype="multipart/form-data" class="form-nuevoCurso2">
-
-                                    @csrf
-                                    <div class="mb-3">
-                                        <label for="clase" class="form-label">Nombre de la clase</label>
-                                        <input class="form-control" type="text" placeholder="Ej. Variables con JS"
-                                            aria-label="default input example" name="nombreClase"
-                                            value="{{ old('nombreClase') }}">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="clase" class="form-label">Duración</label>
-                                        <input class="form-control" type="text" placeholder="Ej. 3.51"
-                                            aria-label="default input example" name="duracionClase"
-                                            value="{{ old('duracionClase') }}">
-                                    </div>
-
-                                    <div class="col mt-3">
-                                        <label for="descripcionCurso"
-                                            class="form-label fw-semibold form-nuevoCurso">Escribe una
-                                            Descripción Completa</label>
-                                        <div id="editor2" class="ql-container ql-snow">
-                                            {!! old('descripcionClase') !!}
-                                            <!-- Mostrar contenido antiguo en el editor -->
-                                        </div>
-                                        <input type="hidden" name="descripcionClase" id="descripcionCurso"
-                                            value="{{ old('descripcionClase') }}">
-                                    </div>
-
-                                    @error('descripcionClase')
-                                        <p class="fs-6 text-danger">{{ $message }}</p>
-                                    @enderror
-
-                                    <div class="input-group mb-3 d-flex flex-column ">
-                                        <label for="videoClase" class="form-label">Video de la clase</label>
-                                        <div class=" d-flex ">
-                                            <label class="input-group-text btn text-light "
-                                                for="videoClase">Upload</label>
-                                            <input type="file" class="form-control" id="videoClase" name="videoClase"
-                                                accept="video/*">
-                                        </div>
-
-                                    </div>
-                                    @error('videoClase')
-                                        <p class="fs-6 text-danger">{{ $message }}</p>
-                                    @enderror
-                                    <div class="input-group mb-3 d-flex flex-column ">
-                                        <label for="clase" class="form-label">Recursos de la clase</label>
-                                        <div class=" d-flex ">
-                                            <label class="input-group-text btn text-light " for="clase">Upload</label>
-                                            <input type="file" class="form-control" id="clase"
-                                                name="recursoClase" accept=".pdf, .docx, .doc">
-                                        </div>
-                                        @error('recursoClase')
-                                            <p class="fs-6 text-danger">{{ $message }}</p>
-                                        @enderror
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger"
-                                            data-bs-dismiss="modal">Cerrar</button>
-                                        <input type="submit" class="btn btn-success ">
-                                    </div>
-                                </form>
-                            </div>
-
-
                         </div>
+
                     </div>
-                </div>
+                @endforeach
             </div>
 
         </div>
-        @endforeach
-    </div>
-
-    </div>
 
     </div>
 @endsection

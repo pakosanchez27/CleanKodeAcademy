@@ -142,6 +142,8 @@ class NuevoCursoController extends Controller
         return redirect()->route('Master.index')->with('success', 'Curso actualizado correctamente');
     }
 
+
+
     private function generateUniqueFileName($file)
     {
         $originalName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
