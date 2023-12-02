@@ -93,6 +93,8 @@ Route::get('/CodeMaster/PdfController', [PdfController::class, 'index'])->name('
 // Crar Capitulo
 Route::post('/CodeMaster/clases', [CrearCapituloController::class, 'store'])->name('crearCapitulo.store');
 Route::put('/crearCapitulo/{idCapitulo}',[CrearCapituloController::class, 'update'])->name('crearCapitulo.update');
+Route::delete('/crearCapitulo/{idCapitulo}',[CrearCapituloController::class, 'destroy'])->name('crearCapitulo.destroy');
 
 Route::post('/CodeMaster/clases/crear', [CrearClasesController::class, 'store'])->name('crearClase.store');
-
+Route::put('/crearClase/{idClase}',[CrearClasesController::class, 'update'])->name('crearClase.update');
+Route::delete('/crearClase/{idClase}',[CrearClasesController::class, 'destroy'])->name('crearClase.destroy');

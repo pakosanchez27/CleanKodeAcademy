@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Clases;
 use App\Models\Curso;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,11 +19,12 @@ class PostMasterController extends Controller
         $usuario = Auth::user();
         $id = $usuario->id;
         $resultados = Curso::where('idUser', $id)->get();
-       
 
-       
+
+
+
         return view('CodeMasters.dashboard', ['resultados' =>$resultados, 'idUser' => $id ] , compact('id'));
-        
+
     }
 
     public function MostrarCursos()

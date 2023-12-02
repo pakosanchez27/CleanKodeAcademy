@@ -356,9 +356,13 @@ forms.forEach(form => {
         this.submit();
     };
 });
+function confirmarEliminacion(nombreClase) {
+    if (confirm(`¿Estás seguro de eliminar la clase '${nombreClase}'?`)) {
+        document.getElementById('formEliminarClase').submit();
+    }
+}
 
 
-        
     </script>
     @vite('resources/js/app.js')
 
