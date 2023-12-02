@@ -15,7 +15,9 @@ class CrearClasesController extends Controller
     {
         $idCurso = $request->input('idCurso');
         $nombreCurso = Curso::find($idCurso)->nombreCurso;
-        $capitulos = Capitulos::all();
+        // Obtener los capítulos asociados a ese curso
+        $capitulos = Capitulos::where('idCurso', $idCurso)->get();
+
         $clasesPorCapitulo = Clases::all()->groupBy('idCapitulo');
         $clases = Clases::all();
         $ids = $clases->pluck('idClase')->all();
